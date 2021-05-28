@@ -54,3 +54,10 @@ function submitMessage() {
 function openContact() {
   card.style.transform = "rotateX(0deg)";
 }
+
+//darkmode
+var icon = document.getElementById("icon");
+
+icon.onclick = function () {
+  document.body.classList.toggle("dark-theme");
+};
