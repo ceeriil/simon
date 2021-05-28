@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Simon Cyril</title>
+
+    <link rel="shortcut icon" type="image/jpg" href="img/profile.png" />
+    ...
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <div class="brand">
+            <img src="img/profile.png" />
+            <a href="#">Simon Cyril</a>
+          </div>
+          <nav>
+            <ul>
+              <li class="active"><a href="#">Portfolio</a></li>
+              <li><a href="#Projects">Projects</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#Contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="profile-info">
+            <div class="profile-wrap">
+              <div class="close" onclick="closeMenu()">
+                <img src="img/icon-close.svg" alt="" />
+              </div>
+              <img src="img/profile-square.png" alt="" class="profile" />
+              <p>Simon Cyril</p>
+            </div>
+          </div>
+
+          <div class="hamburger" onclick="openMenu()">
+            <img src="img/icon-hamburger.svg" alt="" />
+          </div>
+        </div>
+      </header>
+      <div id="banner">
+        <div class="container">
+          <div class="text-side">
+            <h3>Hi, I'm <span style="color: #3bb78f">Simon </span>👋🏽</h3>
+            <p>Front End Developer, Graphic Designer and Artist</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/cee_riil/"
+                ><i class="fa fa-instagram" aria-hidden="true"></i
+              ></a>
+              <a href="https://twitter.com/Simon_ceeril"
+                ><i class="fa fa-twitter" aria-hidden="true"></i
+              ></a>
+              <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+            <button class="btn btn-primary">
+              <a href="#works">View Work</a>
+            </button>
+          </div>
+          <div class="img-side">
+            <img src="img/showcase.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <section id="services">
+        <div class="container">
+          <h1 class="title">What I do</h1>
+          <div class="services">
+            <div class="service">
+              <img src="img/logos-01.png" alt="" class="service-img" />
+              <h4>Web Development</h4>
+              <p>
+                Responsive websites built for an optimal user experience that
+                achieves your business goals.
+              </p>
+            </div>
+            <div class="service">
+              <img src="img/logos-03 (1).png" alt="" class="service-img" />
+              <h4>Graphic Design</h4>
+              <p>
+                I create the visual versions of brands, messages and
+                communications. I help people and businesses get their messages
+                across in ways that are memorable, effective, and aesthetically
+                pleasing.
+              </p>
+            </div>
+            <div class="service">
+              <img src="img/logos-02.png" alt="" class="service-img" />
+              <h4>Arts</h4>
+              <p>We’ve got you covered with our artist services!</p>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary">All Services</button>
+        </div>
+      </section>
+
+      <section id="works">
+        <h1 class="title">My Works</h1>
+
+        <div id="websites">
+          <h2 class="subtitle">Websites Built</h2>
+          <div class="container boxes">
+            <div class="box">
+              <img src="img/websites/preview-3.png" alt="" class="preview" />
+              <div class="box-info">
+                <h3>Bigi Website Clone</h3>
+                <button type="button" class="btn btn-primary">Live Site</button>
+                <button type="button" class="btn btn-secondary">
+                  Source Code
+                </button>
+              </div>
+            </div>
+            <div class="box">
+              <img src="img/websites/preview-2.png" alt="" class="preview" />
+              <div class="box-info">
+                <h3>EasyBank Challenge</h3>
+                <button type="button" class="btn btn-primary">
+                  <a href="https://ceeriil.github.io/easybank-challenge/"
+                    >Live Site</a
+                  >
+                </button>
+                <button type="button" class="btn btn-secondary">
+                  Source Code
+                </button>
+              </div>
+            </div>
+            <div class="box hidden">
+              <img src="img/websites/preview-1.png" alt="" class="preview" />
+              <div class="box-info">
+                <h3>University Website</h3>
+                <button type="button" class="btn btn-primary">Live Site</button>
+                <button type="button" class="btn btn-secondary">
+                  Source Code
+                </button>
+              </div>
+            </div>
+            <div class="box hidden">
+              <img src="img/websites/preview-2.png" alt="" class="preview" />
+              <div class="box-info">
+                <h3>EasyBank Challenge</h3>
+                <button type="button" class="btn btn-primary">
+                  <a href="https://ceeriil.github.io/easybank-challenge/"
+                    >Live Site</a
+                  >
+                </button>
+                <button type="button" class="btn btn-secondary">
+                  Source Code
+                </button>
+              </div>
+            </div>
+          </div>
+          <button class="expand-btn" onclick="expand()">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div id="arts">
+          <h2 class="subtitle">Art Works</h2>
+          <div class="container boxes">
+            <div class="box">
+              <img src="img/arts/eye.jpg" alt="" />
+            </div>
+            <div class="box">
+              <img src="img/arts/kidd.jpg" alt="" />
+            </div>
+            <div class="box">
+              <img src="img/arts/nairobi.jpg" alt="" />
+            </div>
+            <div class="box">
+              <img src="img/arts/portrait.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h1 class="title">About Me</h1>
+        <div class="container">
+          <div
+            class="about-info"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+          >
+            <p>
+              Hi, My name is Simon. I'm an 18 years old front end Developer and
+              Designer from Nigeria
+            </p>
+            <p>
+              I am passionate about creating real elegant looking website.
+              Always keeping it clean and simple with added functionality of
+              user interaction you would like to see.
+            </p>
+            <p>
+              I also do branding which include logo design and business card.
+              Along side with character design, digital art and other graphic
+              design services
+            </p>
+            <ul>
+              <li>Front End Web Development</li>
+              <li>Web Design</li>
+              <li>Logo Design</li>
+              <li>Character Design and Cartoon Portrait</li>
+              <li>Art Sketches</li>
+              <li>Maintenace and Redesign of website</li>
+            </ul>
+          </div>
+          <aside>
+            <img src="img/About-profile.jpeg" alt="" />
+          </aside>
+        </div>
+        <h1 class="subtitle">Skill Set</h1>
+        <div class="container skills">
+          <div class="skill">
+            <div class="bars"><p>Html5</p></div>
+          </div>
+          <div class="skill">
+            <div class="bars"><p>CSS3</p></div>
+          </div>
+          <div class="skill">
+            <div class="bars"><p>JavaScript</p></div>
+          </div>
+          <div class="skill">
+            <div class="bars"><p>Adobe Illustrator</p></div>
+          </div>
+          <div class="skill">
+            <div class="bars"><p>React</p></div>
+          </div>
+          <div class="skill">
+            <div class="bars"><p>PhotoShop</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="Contact">
+        <div class="container">
+          <h2 class="title">Get in Touch</h2>
+          <p>
+            If you want to get in touch, talk to me about a project
+            collaboration or just say hi, fill up the awesome form below or send
+            an email to simonorugbo@gmail.com and lets talk.
+          </p>
+
+          <div class="contact-card">
+            <div class="innerbox" id="contact-card">
+              <div class="cardfront">
+                <h1>Contact Me</h1>
+                <form>
+                  <input
+                    type="text"
+                    placeholder="Enter your Name"
+                    class="input-box"
+                  /><br />
+
+                  <input
+                    type="email"
+                    placeholder="Enter your Email"
+                    class="input-box"
+                  />
+                  <textarea id="textarea" cols="30" rows="10">
+Enter Your Message</textarea
+                  >
+                  <button class="btn btn-primary" onclick="submitMessage()">
+                    Send
+                  </button>
+                </form>
+              </div>
+              <div class="cardback">
+                <h1>Failed!</h1>
+                <p>Your Message was not Sent. Try Using email</p>
+                <button class="btn" onclick="openContact()">back</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="social-media">
+        <div class="container">
+          <h1>Let's Get Social</h1>
+          <div class="social-btn">
+            <a href="https://www.instagram.com/cee_riil/" target="_blank"
+              ><div class="social insta">
+                <i class="fa fa-instagram fa-2x"></i></div
+            ></a>
+            <a href="https://twitter.com/Simon_ceeril" target="_blank"
+              ><div class="social twi">
+                <i class="fa fa-twitter fa-2x"></i></div
+            ></a>
+            <a href="#" target="_blank"
+              ><div class="social in">
+                <i class="fa fa-linkedin fa-2x"></i></div
+            ></a>
+            <a href="#" target="_blank"
+              ><div class="social pin">
+                <i class="fa fa-pinterest-p fa-2x"></i></div
+            ></a>
+            <a href="#" target="_blank"
+              ><div class="social git">
+                <i class="fa fa-github fa-2x"></i></div
+            ></a>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p>Copyright Simon</p>
+      </footer>
+    </div>
+
+    <script>
+      const nav = document.querySelector("nav");
+      const profile = document.querySelector(".profile-info");
+      const showbox = document.querySelector("#websites");
+      const bars = document.querySelectorAll(".bars");
+      const navlinks = document.querySelectorAll("nav a");
+      const mediaQuery = window.matchMedia("(max-width: 667px)");
+
+      function openMenu() {
+        nav.style.transform = "translateX(0)";
+        profile.style.transform = "translateX(0)";
+      }
+
+      function closeMenu() {
+        if (mediaQuery.matches) {
+          nav.style.transform = "translateX(700px)";
+          profile.style.transform = "translateX(-700px)";
+        } else {
+          nav.style.transform = "translateX(0)";
+          profile.style.transform = "translateX(0)";
+        }
+      }
+
+      function expand() {
+        showbox.classList.toggle("active");
+      }
+
+      navlinks.forEach((navlink) => {
+        navlink.addEventListener("click", closeMenu);
+      });
+
+      //animate skill bar
+      window.addEventListener("scroll", checkBoxes);
+      checkBoxes();
+
+      function checkBoxes() {
+        const triggerpoint = (window.innerHeight / 4) * 4;
+
+        bars.forEach((bar) => {
+          const boxTop = bar.getBoundingClientRect().top;
+
+          if (boxTop < triggerpoint) {
+            bar.classList.add("show");
+          } else {
+            bar.classList.remove("show");
+          }
+        });
+      }
+
+      //animate contact form
+      var card = document.getElementById("contact-card");
+      function submitMessage() {
+        card.style.transform = "rotateX(-180deg)";
+      }
+      function openContact() {
+        card.style.transform = "rotateX(0deg)";
+      }
+    </script>
+  </body>
+</html>
