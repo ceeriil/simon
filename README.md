@@ -1,2 +1,2 @@
 # Simon-Cyril
-Updated Portfolio
+A whole page about me :)
