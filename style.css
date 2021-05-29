@@ -278,6 +278,7 @@ header .container .profile-wrap .profile {
 .services .service:hover {
   background: linear-gradient(to right, #071410, #0bab64 60%);
   background-position: left bottom;
+  color: #eee;
 }
 
 .services .service img {
@@ -568,7 +569,7 @@ footer {
     top: 0;
     background: var(--bg-main);
     width: 100%;
-    height: 50vh;
+    height: 50%;
     right: 0;
     z-index: 10;
     transform: translateX(-700px);
