@@ -62,14 +62,19 @@ a {
 }
 
 .btn-primary:hover {
-  background: #78e5e1;
-  color: #555;
+  /* background: #78e5e1;
+  color: #555; */
+  background-position: left bottom;
 }
 
 .btn-primary {
   color: #fff;
-  background-color: #3bb78f;
-  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+  /*  background-color: #3bb78f;
+  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%); */
+  background: linear-gradient(to right, #071410, #0bab64 60%);
+  background-size: 210% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
 }
 
 .btn-secondary {
@@ -267,11 +272,12 @@ header .container .profile-wrap .profile {
   text-align: center;
   border: 1px solid #ccc;
   cursor: pointer;
-  transition: background 1s ease;
+  transition: all 1s ease;
 }
 
 .services .service:hover {
-  background: #ccc;
+  background: linear-gradient(to right, #071410, #0bab64 60%);
+  background-position: left bottom;
 }
 
 .services .service img {
