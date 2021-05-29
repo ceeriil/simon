@@ -21,9 +21,9 @@
 .dark-theme {
   --primary-color: #232b2b;
   --text-color: #fff;
-  --overlay: linear-gradient(rgba(35, 43, 43, 0.7), rgba(35, 43, 43, 0.7)),
+  --overlay: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)),
     url(https://images.unsplash.com/photo-1557683316-973673baf926?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=715&q=80);
-  --section-bg2: #1b202b;
+  --section-bg2: #232425;
   --section-bg3: #272424;
   --section-bg1: rgb(5, 5, 5);
   --section-bg4: #272525;
@@ -219,8 +219,7 @@ header .container .profile-wrap .profile {
   padding-top: 5%;
   backdrop-filter: blur(1rem);
   padding-bottom: 10%;
-
-  position: static;
+  animation: hue 15s infinite alternate;
 }
 
 #banner .container {
@@ -241,8 +240,20 @@ header .container .profile-wrap .profile {
   padding: 0.5rem 0;
 }
 
+#banner .container .text-side h3,
+#banner .container .text-side p {
+  animation: slideInUp 1s;
+  animation-delay: 0.5s;
+}
+
 #banner .container .social-icons {
   margin: 1rem 0;
+}
+
+#banner .container .social-icons,
+#banner .container button {
+  animation: slideInUp 1s;
+  animation-delay: 1s;
 }
 
 #banner .container .social-icons .fa {
@@ -252,6 +263,11 @@ header .container .profile-wrap .profile {
 
 #banner .container .social-icons .fa-instagram {
   padding-left: 0;
+}
+
+#banner .img-side {
+  animation: slideInLeft 1s;
+  animation-delay: 1.5s;
 }
 
 #services {
@@ -534,6 +550,14 @@ footer {
   color: #fff;
 }
 
+#hand-emoji {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
 @media (max-width: 900px) {
   header .container nav ul li {
     padding: 0.8rem 0.8rem;
@@ -615,5 +639,69 @@ footer {
   body {
     font-size: 14px;
     width: 100vh;
+  }
+}
+
+@media (min-width: 1500) {
+  body {
+    font-size: 22px;
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(25deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-18deg);
+  }
+  30% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(-14deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
   }
 }
