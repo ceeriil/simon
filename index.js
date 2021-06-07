@@ -46,6 +46,90 @@ function checkBoxes() {
   });
 }
 
+//animate left object
+const leftItems = document.querySelectorAll(".left-item");
+
+window.addEventListener("scroll", checkItem);
+
+checkItem();
+
+function checkItem() {
+  const triggerpoint = (window.innerHeight / 5) * 4;
+
+  leftItems.forEach((leftItem) => {
+    const boxTop = leftItem.getBoundingClientRect().top;
+
+    if (boxTop < triggerpoint) {
+      leftItem.classList.add("show");
+    } else {
+      leftItem.classList.remove("show");
+    }
+  });
+}
+
+//animate right item
+const rightItems = document.querySelectorAll(".right-item");
+
+window.addEventListener("scroll", checkItem2);
+
+checkItem2();
+
+function checkItem2() {
+  const triggerpoint = (window.innerHeight / 5) * 4;
+
+  rightItems.forEach((rightItem) => {
+    const boxTop = rightItem.getBoundingClientRect().top;
+
+    if (boxTop < triggerpoint) {
+      rightItem.classList.add("show");
+    } else {
+      rightItem.classList.remove("show");
+    }
+  });
+}
+
+//animate zoom item
+const zoomItems = document.querySelectorAll(".zoom-item");
+
+window.addEventListener("scroll", checkItem3);
+
+checkItem3();
+
+function checkItem3() {
+  const triggerpoint = (window.innerHeight / 4) * 4;
+
+  zoomItems.forEach((zoomItem) => {
+    const boxTop = zoomItem.getBoundingClientRect().top;
+
+    if (boxTop < triggerpoint) {
+      zoomItem.classList.add("show");
+    } else {
+      zoomItem.classList.remove("show");
+    }
+  });
+}
+
+//animate showItem
+const showItems = document.querySelectorAll(".show-item");
+
+window.addEventListener("scroll", checkItem4);
+
+checkItem4();
+
+function checkItem4() {
+  const triggerpoint = (window.innerHeight / 5) * 4;
+
+  showItems.forEach((showItem) => {
+    const boxTop = showItem.getBoundingClientRect().top;
+
+    if (boxTop < triggerpoint) {
+      showItem.classList.add("show");
+    } else {
+      showItem.classList.remove("show");
+    }
+  });
+}
+
 //animate contact form
 var card = document.getElementById("contact-card");
 function submitMessage() {
@@ -63,7 +147,7 @@ icon.onclick = function () {
 };
 
 //typing Effect
-var TxtType = function (el, toRotate, period) {
+/* var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -124,3 +208,4 @@ window.onload = function () {
 };
 
 Resources;
+ */

@@ -23,6 +23,8 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <!-- Animation -->
+
     <!-- Custom Css -->
     <link rel="stylesheet" href="style.css" />
     <title>Simon Cyril</title>
@@ -69,14 +71,15 @@
               ><span id="hand-emoji">👋🏽</span>
             </h2>
             <p>
-              <a
+              <!-- <a
                 href=""
                 class="typewrite"
                 data-period="2000"
                 data-type='[ "I am a Front End Web developer", "I Design website, logos, banners and cartoon characters", "I Love to Develop Web Applications.", "I Love drawing !" ]'
               >
                 <span class="wrap"></span>
-              </a>
+              </a> -->
+              Front End Web Developer, Graphic Designer and Artist
             </p>
             <div class="social-icons">
               <a href="https://www.instagram.com/cee_riil/"
@@ -96,7 +99,7 @@
               <a href="#works">View Work</a>
             </button>
           </div>
-          <div class="img-side">
+          <div class="img-side right-item">
             <img src="img/showcase.svg" alt="" />
           </div>
         </div>
@@ -104,9 +107,9 @@
 
       <section id="services">
         <div class="container">
-          <h1 class="title">What I do</h1>
+          <h1 class="title show-item">What I do</h1>
           <div class="services">
-            <div class="service">
+            <div class="service left-item">
               <img src="img/logos-01.png" alt="" class="service-img" />
               <h4>Web Development</h4>
               <p>
@@ -114,7 +117,7 @@
                 experience that achieves your business goals.
               </p>
             </div>
-            <div class="service">
+            <div class="service right-item">
               <img src="img/logos-03 (1).png" alt="" class="service-img" />
               <h4>Graphic Design</h4>
               <p>
@@ -124,23 +127,25 @@
                 pleasing.
               </p>
             </div>
-            <div class="service">
+            <div class="service left-item">
               <img src="img/logos-02.png" alt="" class="service-img" />
               <h4>Arts</h4>
               <p>I've got you covered with our artist services! :-)</p>
             </div>
           </div>
-          <button type="button" class="btn btn-primary">All Services</button>
+          <button type="button" class="btn btn-primary show-item">
+            All Services
+          </button>
         </div>
       </section>
 
       <section id="works">
-        <h1 class="title">My Works</h1>
+        <h1 class="title show-item">My Works</h1>
 
         <div id="websites">
-          <h2 class="subtitle">Websites Built</h2>
+          <h2 class="subtitle show-item">Websites Built</h2>
           <div class="container boxes">
-            <div class="box">
+            <div class="box zoom-item">
               <img src="img/websites/preview-3.png" alt="" class="preview" />
               <div class="box-info">
                 <h3>Bigi Website Clone</h3>
@@ -150,7 +155,7 @@
                 </button>
               </div>
             </div>
-            <div class="box">
+            <div class="box zoom-item">
               <img src="img/websites/preview-2.png" alt="" class="preview" />
               <div class="box-info">
                 <h3>EasyBank Challenge</h3>
@@ -165,14 +170,14 @@
               </div>
             </div>
             <div class="box hidden">
-              <img
-                src="https://ceeriil.github.io/benson-idahosa-uni/"
-                alt=""
-                class="preview"
-              />
+              <img src="img/websites/preview-1.png" alt="" class="preview" />
               <div class="box-info">
                 <h3>University Website</h3>
-                <button type="button" class="btn btn-primary">Live Site</button>
+                <button type="button" class="btn btn-primary">
+                  <a href="https://ceeriil.github.io/benson-idahosa-uni/"
+                    >Live Site</a
+                  >
+                </button>
                 <button type="button" class="btn btn-secondary">
                   Source Code
                 </button>
@@ -201,18 +206,18 @@
         </div>
 
         <div id="arts">
-          <h2 class="subtitle">Art Works</h2>
+          <h2 class="subtitle show-item">Art Works</h2>
           <div class="container boxes">
-            <div class="box">
+            <div class="box left-item">
               <img src="img/arts/eye.jpg" alt="" />
             </div>
-            <div class="box">
+            <div class="box right-item">
               <img src="img/arts/kidd.jpg" alt="" />
             </div>
-            <div class="box">
+            <div class="box left-item">
               <img src="img/arts/nairobi.jpg" alt="" />
             </div>
-            <div class="box">
+            <div class="box right-item">
               <img src="img/arts/portrait.jpg" alt="" />
             </div>
           </div>
@@ -220,13 +225,9 @@
       </section>
 
       <section id="about">
-        <h1 class="title">About Simon</h1>
+        <h1 class="title show-item">About Simon</h1>
         <div class="container">
-          <div
-            class="about-info"
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom"
-          >
+          <div class="about-info show-item">
             <p>
               Hi, My name is Simon. I'm an 18 years old front end Developer and
               Designer from Nigeria
@@ -257,36 +258,36 @@
         <h1 class="subtitle" id="skills">Skill Set</h1>
         <div class="container skills">
           <div class="skill">
-            <div class="bars"><p>Html5</p></div>
+            <div class="bars" style="width: 88%"><p>Html5</p></div>
           </div>
           <div class="skill">
-            <div class="bars"><p>CSS3</p></div>
+            <div class="bars" style="width: 94%"><p>CSS3</p></div>
           </div>
           <div class="skill">
-            <div class="bars"><p>JavaScript</p></div>
+            <div class="bars" style="width: 70%"><p>JavaScript</p></div>
           </div>
           <div class="skill">
-            <div class="bars"><p>Adobe Illustrator</p></div>
+            <div class="bars" style="width: 80%"><p>Adobe Illustrator</p></div>
           </div>
           <div class="skill">
-            <div class="bars"><p>React</p></div>
+            <div class="bars" style="width: 60%"><p>React</p></div>
           </div>
           <div class="skill">
-            <div class="bars"><p>PhotoShop</p></div>
+            <div class="bars" style="width: 62%"><p>PhotoShop</p></div>
           </div>
         </div>
       </section>
 
       <section id="Contact">
         <div class="container">
-          <h2 class="title">Get in Touch</h2>
-          <p>
+          <h2 class="title show-item">Get in Touch</h2>
+          <p class="show-item">
             If you want to get in touch, talk to me about a project
             collaboration or just say hi, fill up the awesome form below or send
             an email to simonorugbo@gmail.com and lets talk.
           </p>
 
-          <div class="contact-card">
+          <div class="contact-card zoom-item">
             <div class="innerbox" id="contact-card">
               <div class="cardfront">
                 <h1>Contact Me</h1>
@@ -328,23 +329,23 @@
           <h1>Let's Get Social</h1>
           <div class="social-btn">
             <a href="https://www.instagram.com/cee_riil/" target="_blank"
-              ><div class="social insta">
+              ><div class="social insta zoom-item">
                 <i class="fa fa-instagram fa-2x"></i></div
             ></a>
             <a href="https://twitter.com/Simon_ceeril" target="_blank"
-              ><div class="social twi">
+              ><div class="social twi zoom-item">
                 <i class="fa fa-twitter fa-2x"></i></div
             ></a>
             <a href="www.linkedin.com/in/simon-cyril" target="_blank"
-              ><div class="social in">
+              ><div class="social in zoom-item">
                 <i class="fa fa-linkedin fa-2x"></i></div
             ></a>
             <a href="#" target="_blank"
-              ><div class="social pin">
+              ><div class="social pin zoom-item">
                 <i class="fa fa-pinterest-p fa-2x"></i></div
             ></a>
             <a href="https://github.com/ceeriil" target="_blank"
-              ><div class="social git">
+              ><div class="social git zoom-item">
                 <i class="fa fa-github fa-2x"></i></div
             ></a>
           </div>
@@ -357,6 +358,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script>
       $("a").click(function (e) {
         $("html, body").animate(

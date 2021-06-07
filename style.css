@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 :root {
@@ -40,6 +41,7 @@ body {
   max-width: 2000px;
   width: 100%;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 /* Global Styling */
@@ -51,6 +53,7 @@ a {
 .container {
   width: 85%;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .btn {
@@ -144,7 +147,7 @@ header {
   position: fixed;
   width: 100%;
   background: var(--primary-color);
-  height: 8%;
+  height: auto;
   top: 0;
   z-index: 2;
 }
@@ -153,6 +156,7 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 0;
 }
 
 header .container .brand {
@@ -187,6 +191,7 @@ header .container .hamburger {
 
 header .container .hamburger {
   color: var(--text-color);
+  font-size: 1.7rem;
 }
 
 header .container .profile-info {
@@ -209,6 +214,8 @@ header .container .profile-wrap .close {
   top: 10px;
   right: 10px;
   color: var(--text-color);
+  font-size: 1.7rem;
+  font-weight: 200;
 }
 
 header .container .profile-wrap .profile {
@@ -247,7 +254,6 @@ header .container .profile-wrap .profile {
 
 #banner .container .text-side h2,
 #banner .container .text-side p {
-  animation: slideInUp 1s;
   animation-delay: 0.5s;
 }
 
@@ -553,6 +559,7 @@ footer {
   width: 100%;
   text-align: center;
   color: #fff;
+  padding: 10px 0;
 }
 
 #hand-emoji {
@@ -561,6 +568,48 @@ footer {
   animation-iteration-count: infinite; /* Never stop waving :) */
   transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
   display: inline-block;
+}
+
+.left-item {
+  transform: translateX(-100%);
+  opacity: 0.1;
+  transition: all 0.7s ease-in;
+}
+
+.left-item.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.right-item {
+  opacity: 0.1;
+  transform: translateX(100%);
+  transition: all 0.7s ease-in;
+}
+
+.right-item.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.zoom-item {
+  transform: scale(0);
+  transition: all 0.7s ease-in;
+}
+
+.zoom-item.show {
+  transform: scale(1);
+}
+
+.show-item {
+  opacity: 0.1;
+  transform: translateY(50%);
+  transition: all 0.7s ease;
+}
+
+.show-item.show {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 900px) {
@@ -654,28 +703,6 @@ footer {
 @media (min-width: 1500) {
   body {
     font-size: 22px;
-  }
-}
-
-@keyframes slideInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes slideInLeft {
-  0% {
-    opacity: 1;
-    transform: none;
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(100%);
   }
 }
 
