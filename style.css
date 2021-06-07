@@ -144,7 +144,7 @@ header {
   position: fixed;
   width: 100%;
   background: var(--primary-color);
-  height: auto;
+  height: 8%;
   top: 0;
   z-index: 2;
 }
@@ -167,6 +167,7 @@ header .container .brand img {
 
 .brand h1 {
   font-size: 1.5rem;
+  font-weight: 400;
 }
 
 header .container nav ul li {
