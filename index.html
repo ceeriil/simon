@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Hey there, I'm Simon. I'm a web developer and a gradic designer. If you are seeing this you probably looked me up on google. Want to know about me? Click :-)"
+      content="Hey there, I'm Simon. I'm a web developer and a graphic designer. If you are seeing this you probably looked me up on google. Want to know about me? Click :-)"
     />
     <meta property="og:title" content="Simon Cyril" />
     <meta property="og:description" content="Front End Web Developer" />
@@ -40,7 +40,7 @@
           </div>
           <nav>
             <ul>
-              <li class="active"><a href="#">Portfolio</a></li>
+              <li class="active"><a href="#home">Portfolio</a></li>
               <li><a href="#Projects">Projects</a></li>
               <li><a href="#about">About Me</a></li>
               <li><a href="#Contact">Contact</a></li>
@@ -62,7 +62,7 @@
         </div>
       </header>
       <div id="banner">
-        <div class="container">
+        <div class="container" id="home">
           <div class="text-side">
             <h2>
               Hi, I'm <span style="color: #3bb78f">Simon </span
@@ -88,7 +88,9 @@
               <a href="https://github.com/ceeriil"
                 ><i class="fa fa-github" aria-hidden="true"></i
               ></a>
-              <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              <a href="www.linkedin.com/in/simon-cyril"
+                ><i class="fa fa-linkedin" aria-hidden="true"></i
+              ></a>
             </div>
             <button class="btn btn-primary">
               <a href="#works">View Work</a>
@@ -333,7 +335,7 @@
               ><div class="social twi">
                 <i class="fa fa-twitter fa-2x"></i></div
             ></a>
-            <a href="#" target="_blank"
+            <a href="www.linkedin.com/in/simon-cyril" target="_blank"
               ><div class="social in">
                 <i class="fa fa-linkedin fa-2x"></i></div
             ></a>
@@ -354,6 +356,17 @@
       </footer>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $("a").click(function (e) {
+        $("html, body").animate(
+          {
+            scrollTop: $($(this).attr("href")).offset().top,
+          },
+          1000
+        );
+      });
+    </script>
     <script src="index.js"></script>
   </body>
 </html>
