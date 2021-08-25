@@ -11,9 +11,10 @@
     <meta property="og:title" content="Simon Cyril" />
     <meta property="og:description" content="Front End Web Developer" />
     <meta property="og:image" content="img/prev.png" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -109,7 +110,7 @@
         <div class="container">
           <h1 class="title show-item">What I do</h1>
           <div class="services">
-            <div class="service left-item">
+            <div class="service">
               <img src="img/logos-01.png" alt="" class="service-img" />
               <h4>Web Development</h4>
               <p>
@@ -117,7 +118,7 @@
                 experience that achieves your business goals.
               </p>
             </div>
-            <div class="service right-item">
+            <div class="service">
               <img src="img/logos-03 (1).png" alt="" class="service-img" />
               <h4>Graphic Design</h4>
               <p>
@@ -127,7 +128,7 @@
                 pleasing.
               </p>
             </div>
-            <div class="service left-item">
+            <div class="service">
               <img src="img/logos-02.png" alt="" class="service-img" />
               <h4>Arts</h4>
               <p>I've got you covered with our artist services! :-)</p>
@@ -140,25 +141,27 @@
       </section>
 
       <section id="works">
-        <h1 class="title show-item">My Works</h1>
+        <h1 class="title">My Works</h1>
 
         <div id="websites">
-          <h2 class="subtitle show-item">Websites Built</h2>
+          <h2 class="subtitle">Websites Built</h2>
           <div class="container boxes">
-            <div class="box zoom-item">
-              <img src="img/websites/preview-3.png" alt="" class="preview" />
+            <div class="box">
+              <img src="img/bigi-drink.png" alt="" class="preview" />
               <div class="box-info">
                 <h3>Bigi Website Clone</h3>
-                <button type="button" class="btn btn-primary"><a href="http://ceeriil.github.io/bigi-drink"> Live Site </a> </button>
+                <button type="button" class="btn btn-primary">
+                  <a href="http://ceeriil.github.io/bigi-drink"> Live Site </a>
+                </button>
                 <button type="button" class="btn btn-secondary">
                   Source Code
                 </button>
               </div>
             </div>
-            <div class="box zoom-item">
-              <img src="img/websites/preview-2.png" alt="" class="preview" />
+            <div class="box">
+              <img src="img/easybank.png" alt="" class="preview" />
               <div class="box-info">
-                <h3>EasyBank Challenge</h3>
+                <h3>EasyBank Website</h3>
                 <button type="button" class="btn btn-primary">
                   <a href="https://ceeriil.github.io/easybank-challenge/"
                     >Live Site</a
@@ -170,7 +173,7 @@
               </div>
             </div>
             <div class="box hidden">
-              <img src="https://ceeriil.xyz/img/websites/preview-1.png" alt="" class="preview" />
+              <img src="img/biu.png" alt="" class="preview" />
               <div class="box-info">
                 <h3>University Website</h3>
                 <button type="button" class="btn btn-primary">
@@ -184,18 +187,14 @@
               </div>
             </div>
             <div class="box hidden">
-              <img src="https://ceeriil.xyz/img/websites/preview-2.png" alt="" class="preview" />
+              <img src="img/patek.png" alt="" class="preview" />
               <div class="box-info">
-                <h3>EasyBank Challenge</h3>
+                <h3>Patek Website</h3>
                 <button type="button" class="btn btn-primary">
-                  <a href="https://ceeriil.github.io/easybank-challenge/"
-                    >Live Site</a
-                  >
+                  <a href="https://patekproxies.io">Live Site</a>
                 </button>
-                <button type="button" class="btn btn-secondary">
-                  <a href="https://github.com/ceeriil/moving-car-animation"
-                    >Source Code</a
-                  >
+                <button type="button" class="btn btn-secondary" disabled>
+                  Source Code
                 </button>
               </div>
             </div>
@@ -208,16 +207,16 @@
         <div id="arts">
           <h2 class="subtitle show-item">Art Works</h2>
           <div class="container boxes">
-            <div class="box left-item">
+            <div class="box">
               <img src="https://ceeriil.xyz/img/arts/eye.jpg" alt="" />
             </div>
-            <div class="box right-item">
+            <div class="box">
               <img src="https://ceeriil.xyz/img/arts/kidd.jpg" alt="" />
             </div>
-            <div class="box left-item">
+            <div class="box">
               <img src="https://ceeriil.xyz/img/arts/nairobi.jpg" alt="" />
             </div>
-            <div class="box right-item">
+            <div class="box">
               <img src="https://ceeriil.xyz/img/arts/portrait.jpg" alt="" />
             </div>
           </div>
@@ -251,7 +250,7 @@
               <li>Maintenace and Redesign of website</li>
             </ul>
           </div>
-          <aside>
+          <aside class="image-box">
             <img src="img/About-profile.jpeg" alt="" />
           </aside>
         </div>
@@ -264,13 +263,13 @@
             <div class="bars" style="width: 94%"><p>CSS3</p></div>
           </div>
           <div class="skill">
-            <div class="bars" style="width: 70%"><p>JavaScript</p></div>
+            <div class="bars" style="width: 75%"><p>JavaScript</p></div>
           </div>
           <div class="skill">
             <div class="bars" style="width: 80%"><p>Adobe Illustrator</p></div>
           </div>
           <div class="skill">
-            <div class="bars" style="width: 60%"><p>React</p></div>
+            <div class="bars" style="width: 65%"><p>React</p></div>
           </div>
           <div class="skill">
             <div class="bars" style="width: 62%"><p>PhotoShop</p></div>
@@ -291,33 +290,35 @@
             <div class="innerbox" id="contact-card">
               <div class="cardfront">
                 <h1>Contact Me</h1>
-                <form>
+                <form action="POST" data-netlify="true">
+                  <label for="name">Name:</label>
                   <input
                     type="text"
                     placeholder="Enter your Name"
                     class="input-box"
+                    name="name"
+                    id="name"
                   /><br />
 
+                  <label for="email">Email:</label>
                   <input
                     type="email"
+                    id="email"
                     placeholder="Enter your Email"
                     class="input-box"
+                    name="email"
                   />
-                  <textarea
+
+                  Message:<textarea
                     id="textarea"
                     cols="30"
                     rows="10"
+                    name="message"
+                    id="message"
                     placeholder="Enter Your Message"
                   ></textarea>
-                  <button class="btn btn-primary" onclick="submitMessage()">
-                    Send
-                  </button>
+                  <button class="btn btn-primary" type="submit">Send</button>
                 </form>
-              </div>
-              <div class="cardback">
-                <h1>Failed!</h1>
-                <p>Your Message was not Sent. Try Using email</p>
-                <button class="btn" onclick="openContact()">back</button>
               </div>
             </div>
           </div>
@@ -360,14 +361,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script>
-      $("a").click(function (e) {
+      /*   $("a").click(function (e) {
         $("html, body").animate(
           {
             scrollTop: $($(this).attr("href")).offset().top,
           },
           1000
         );
-      });
+      }); */
     </script>
     <script src="index.js"></script>
   </body>

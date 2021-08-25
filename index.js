@@ -47,7 +47,7 @@ function checkBoxes() {
 }
 
 //animate left object
-const leftItems = document.querySelectorAll(".left-item");
+/* const leftItems = document.querySelectorAll(".left-item");
 
 window.addEventListener("scroll", checkItem);
 
@@ -129,7 +129,7 @@ function checkItem4() {
     }
   });
 }
-
+ */
 //animate contact form
 var card = document.getElementById("contact-card");
 function submitMessage() {

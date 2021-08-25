@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 :root {
@@ -17,25 +16,32 @@
   --section-bg4: #fafafa;
   --bg-main: #d5e2eb;
   --bg-secondary: #78e5e1;
+  --nav-bg: #fff;
 }
 
 .dark-theme {
   --primary-color: #232b2b;
   --text-color: #fff;
-  --overlay: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)),
-    url(https://images.unsplash.com/photo-1557683316-973673baf926?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=715&q=80);
-  --section-bg2: #232425;
-  --section-bg3: #272424;
-  --section-bg1: rgb(5, 5, 5);
-  --section-bg4: #272525;
+  /*  --overlay: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)),
+    url(https://images.unsplash.com/photo-1557683316-973673baf926?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=715&q=80); */
+  --overlay: #112028;
+  --section-bg2: #112028;
+  --section-bg3: #112028;
+  --section-bg1: #112028;
+  --section-bg4: #0f1c23;
   --bg-main: #273547;
   --bg-secondary: #3bb78f;
+  --nav-bg: #00000000;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--primary-color);
   color: var(--text-color);
-  font-family: "Roboto Slab", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   max-width: 2000px;
@@ -62,31 +68,32 @@ a {
   margin-top: 15px;
   cursor: pointer;
   border: none;
+  font-family: inherit;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
 }
 
 .btn-primary:hover {
-  /* background: #78e5e1;
-  color: #555; */
   background-position: left bottom;
 }
 
 .btn-primary {
   color: #fff;
-  /*  background-color: #3bb78f;
-  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%); */
-  background: linear-gradient(to right, #071410, #0bab64 60%);
+  background: linear-gradient(to right, #071410, #3bb78f 60%);
   background-size: 210% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;
 }
 
 .btn-secondary {
-  background-color: #ccc;
+  background-color: #d8d8d8;
   color: #222;
 }
 
 .btn-secondary:hover {
-  background-color: #c1c1c1;
+  background-color: #55b79d;
 }
 
 .title {
@@ -104,6 +111,7 @@ a {
   display: block;
   transform: translateY(50px);
 }
+
 .title::after {
   content: "";
   background: #3bb78f;
@@ -118,7 +126,7 @@ a {
 
 .subtitle {
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .subtitle::before {
@@ -143,13 +151,21 @@ a {
   transform: translateY(4px);
 }
 
+.image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 header {
   position: fixed;
   width: 100%;
-  background: var(--primary-color);
+  background: var(--nav-bg);
   height: auto;
   top: 0;
   z-index: 2;
+  backdrop-filter: blur(10px);
 }
 
 header .container {
@@ -178,11 +194,26 @@ header .container nav ul li {
   display: inline-block;
   padding: 0.8rem 1.2rem;
   transition: all 1s ease-in;
+  position: relative;
 }
 
-header .container nav ul li.active,
-header .container nav ul li:hover {
+header .container nav ul li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 5px;
+  left: 0;
   background: var(--secondary-color);
+  transition: all 1s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+
+header .container nav ul li:hover a::after {
+  width: 100%;
 }
 
 header .container .hamburger {
@@ -231,7 +262,6 @@ header .container .profile-wrap .profile {
   padding-top: 5%;
   backdrop-filter: blur(1rem);
   padding-bottom: 10%;
-  animation: hue 15s infinite alternate;
 }
 
 #banner .container {
@@ -283,7 +313,7 @@ header .container .profile-wrap .profile {
 
 #services {
   padding: 1rem 0;
-  background: var(--section-bg1);
+  background: var(--section-bg4);
 }
 
 .services {
@@ -297,20 +327,22 @@ header .container .profile-wrap .profile {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff15;
   cursor: pointer;
   transition: all 1s ease;
 }
 
-.services .service:hover {
+/* .services .service:nth-child(2) {
   background: linear-gradient(to right, #071410, #0bab64 60%);
+  background: #55b79d;
   background-position: left bottom;
-  color: #eee;
-}
+  color: var(--text-color);
+} */
 
 .services .service img {
   width: 40%;
   align-self: center;
+  margin-bottom: 1rem;
 }
 
 #services button {
@@ -319,7 +351,8 @@ header .container .profile-wrap .profile {
 }
 
 #works {
-  background-color: var(--section-bg2);
+  background-color: var(--section-bg1);
+  padding: 2rem 0;
 }
 
 #websites .boxes {
@@ -333,7 +366,6 @@ header .container .profile-wrap .profile {
 }
 
 #websites .boxes .box {
-  background-color: var(--primary-color);
   text-align: center;
   padding-bottom: 1rem;
 }
@@ -347,10 +379,6 @@ header .container .profile-wrap .profile {
 #websites.active .boxes .box.hidden {
   height: 100%;
   transform: scaleY(1);
-}
-
-#websites .boxes .box .box-info {
-  border-top: 2px solid var(--secondary-color);
 }
 
 #websites .expand-btn {
@@ -395,7 +423,10 @@ header .container .profile-wrap .profile {
 }
 
 #about {
-  background: var(--section-bg3);
+  background: var(--section-bg4);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem 0;
 }
 
 #about .container {
@@ -409,8 +440,26 @@ header .container .profile-wrap .profile {
   line-height: 1.8rem;
 }
 
+#about .container .about-info ul {
+  list-style-type: square;
+}
+
 #about .container .about-info ul li {
-  margin-left: 20px;
+  /*  list-style: square outside none;
+  display: list-item;
+  margin-left: 1em; */
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+#about .container .about-info ul li::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: FontAwesome;
+  content: "\f0da";
+  color: #3bb78f;
 }
 
 #about .container aside {
@@ -421,15 +470,12 @@ header .container .profile-wrap .profile {
 }
 
 #about .container img {
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
-  box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px,
-    rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px,
-    rgb(31, 193, 36) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px;
 }
 
 .skill {
-  background: #fff;
+  background: #d8d8d8;
   margin: 1rem 0;
   overflow-x: hidden;
 }
@@ -466,7 +512,6 @@ header .container .profile-wrap .profile {
   width: 80%;
   height: 20rem;
   margin: 1.5rem auto;
-  /* perspective: 1000px; */
 }
 
 #Contact .innerbox {
@@ -482,7 +527,7 @@ header .container .profile-wrap .profile {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: var(--bg-main);
+  background: var(--section-bg2);
   padding: 1.5rem;
   box-sizing: border-box;
   backface-visibility: hidden;
@@ -499,26 +544,41 @@ header .container .profile-wrap .profile {
 }
 
 #Contact .input-box {
-  width: 100%;
+  width: 90%;
   border: none;
   margin: 6px 0;
   height: 2rem;
-  padding: 0 1rem;
-  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   outline: none;
   text-align: center;
+  color: #fff;
   border: 1px solid #fff;
+  background: transparent;
+  font-family: inherit;
+}
+
+#Contact .input-box::placeholder {
+  color: #fff;
 }
 
 #Contact textarea {
-  width: 100%;
+  width: 85%;
   border: none;
   margin: 6px 0;
   height: 4rem;
+  font-size: 1rem;
   text-align: center;
   outline: none;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   font-family: inherit;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+#Contact textarea::placeholder {
+  color: #fff;
 }
 
 #social-media {
@@ -570,7 +630,7 @@ footer {
   display: inline-block;
 }
 
-.left-item {
+/* .left-item {
   transform: translateX(-100%);
   opacity: 0.1;
   transition: all 0.7s ease-in;
@@ -611,7 +671,7 @@ footer {
   transform: translateY(0);
   opacity: 1;
 }
-
+ */
 @media (max-width: 900px) {
   header .container nav ul li {
     padding: 0.8rem 0.8rem;
@@ -721,7 +781,7 @@ footer {
   }
   10% {
     transform: rotate(25deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
   20% {
     transform: rotate(-18deg);
   }
