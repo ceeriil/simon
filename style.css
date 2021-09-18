@@ -51,13 +51,13 @@ html {
   z-index: 9999;
 }
 
-.loader {
+/* .loader {
   width: 50px;
   background: white;
   height: 20px;
   animation: move 1s infinite;
   -webkit-animation: move 1s infinite;
-}
+} */
 
 body {
   background-color: var(--section-bg4);
