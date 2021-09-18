@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Hey there, I'm Simon. I'm a web developer and a graphic designer. If you are seeing this you probably looked me up on google. Want to know about me? Click :-)"
+      content=" Personal Website of Simon Cyril also known as ceeriil a Web developer and a graphic designer. "
     />
     <meta property="og:title" content="Simon Cyril" />
     <meta property="og:description" content="Front End Web Developer" />
@@ -33,7 +33,11 @@
     <link rel="shortcut icon" type="image/jpg" href="img/profile.png" />
   </head>
 
-  <body>
+  <body onload="loadFun()">
+    <div id="loading">
+      <div class="loader"></div>
+    </div>
+
     <div class="wrapper">
       <header>
         <div class="container">
@@ -71,17 +75,7 @@
               Hi, I'm <span style="color: #3bb78f">Simon </span
               ><span id="hand-emoji">👋🏽</span>
             </h2>
-            <p>
-              <!-- <a
-                href=""
-                class="typewrite"
-                data-period="2000"
-                data-type='[ "I am a Front End Web developer", "I Design website, logos, banners and cartoon characters", "I Love to Develop Web Applications.", "I Love drawing !" ]'
-              >
-                <span class="wrap"></span>
-              </a> -->
-              Front End Web Developer, Graphic Designer and Artist
-            </p>
+            <p>Front End Web Developer, Graphic Designer and Artist</p>
             <div class="social-icons">
               <a href="https://www.instagram.com/cee_riil/"
                 ><i class="fa fa-instagram" aria-hidden="true"></i
@@ -101,7 +95,13 @@
             </button>
           </div>
           <div class="img-side right-item">
-            <img src="img/showcase.svg" alt="" />
+            <img src="img/showcase.svg" alt="hero image" class="hero-image" />
+            <img
+              src="img/light.png"
+              alt="light image"
+              class="light-image"
+              id="icon"
+            />
           </div>
         </div>
       </div>
@@ -149,7 +149,7 @@
             <div class="box">
               <img src="img/bigi-drink.png" alt="" class="preview" />
               <div class="box-info">
-                <h3>Bigi Website Clone</h3>
+                <h3>Bigi Landing Page</h3>
                 <button type="button" class="btn btn-primary">
                   <a href="http://ceeriil.github.io/bigi-drink"> Live Site </a>
                 </button>
@@ -286,7 +286,7 @@
             an email to simonorugbo@gmail.com and lets talk.
           </p>
 
-          <div class="contact-card zoom-item">
+          <div class="contact-card">
             <div class="innerbox" id="contact-card">
               <div class="cardfront">
                 <h1>Contact Me</h1>
@@ -353,8 +353,7 @@
         </div>
       </section>
       <footer>
-        <p>Copyright Simon 2020</p>
-        <button id="icon">DarkMode</button>
+        <p>&copy; Simon Cyril 2020</p>
       </footer>
     </div>
 
@@ -369,6 +368,10 @@
           1000
         );
       }); */
+      const load = document.getElementById("loading");
+      const loadFun = () => {
+        load.style.display = "none";
+      };
     </script>
     <script src="index.js"></script>
   </body>
