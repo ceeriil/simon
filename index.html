@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,19 @@
     />
     <meta property="og:title" content="Simon Cyril" />
     <meta property="og:description" content="Front End Web Developer" />
-    <meta property="og:image" content="img/prev.png" />
+    <meta property="og:image" content="https://ceeriil.xyz/img/prev.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@ceeriil" />
+    <meta name="twitter:title" content="Simon Cyril" />
+    <meta
+      name="twitter:description"
+      content="Personal Website of Simon Cyril, Web Developer and Designer"
+    />
+    <meta
+      name="twitter:image:src"
+      content="https://ceeriil.xyz/img/profile.png"
+    />
+    <meta name="twitter:site" content="ceeriil.xyz" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -51,6 +63,9 @@
               <li><a href="#Projects">Projects</a></li>
               <li><a href="#about">About Me</a></li>
               <li><a href="#Contact">Contact</a></li>
+              <button class="theme-icon" id="icon">
+                <i class="fa fa-sun-o" aria-hidden="true"></i>
+              </button>
             </ul>
           </nav>
           <div class="profile-info">
@@ -68,6 +83,7 @@
           </div>
         </div>
       </header>
+
       <div id="banner">
         <div class="container" id="home">
           <div class="text-side">
@@ -254,25 +270,25 @@
             <img src="img/About-profile.jpeg" alt="" />
           </aside>
         </div>
-        <h1 class="subtitle" id="skills">Skill Set</h1>
+        <h1 class="subtitle" id="skills">Top Skills</h1>
         <div class="container skills">
           <div class="skill">
-            <div class="bars" style="width: 88%"><p>Html5</p></div>
+            <div class="bars" style="width: 88%"><p>Html</p></div>
           </div>
           <div class="skill">
             <div class="bars" style="width: 94%"><p>CSS3</p></div>
           </div>
           <div class="skill">
-            <div class="bars" style="width: 75%"><p>JavaScript</p></div>
+            <div class="bars" style="width: 80%"><p>JavaScript</p></div>
           </div>
           <div class="skill">
             <div class="bars" style="width: 80%"><p>Adobe Illustrator</p></div>
           </div>
           <div class="skill">
-            <div class="bars" style="width: 65%"><p>React</p></div>
+            <div class="bars" style="width: 75%"><p>React</p></div>
           </div>
           <div class="skill">
-            <div class="bars" style="width: 62%"><p>PhotoShop</p></div>
+            <div class="bars" style="width: 70%"><p>Sketch</p></div>
           </div>
         </div>
       </section>
@@ -291,7 +307,7 @@
               <div class="cardfront">
                 <h1>Contact Me</h1>
                 <form action="POST" data-netlify="true">
-                  <label for="name">Name:</label>
+                  <label for="name">Name</label> <br />
                   <input
                     type="text"
                     placeholder="Enter your Name"
@@ -300,7 +316,7 @@
                     id="name"
                   /><br />
 
-                  <label for="email">Email:</label>
+                  <label for="email">Email</label> <br />
                   <input
                     type="email"
                     id="email"
@@ -309,7 +325,8 @@
                     name="email"
                   />
 
-                  Message:<textarea
+                  <label for="message">Message</label> <br />
+                  <textarea
                     id="textarea"
                     cols="30"
                     rows="10"
