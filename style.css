@@ -727,6 +727,10 @@ footer {
 }
 
 @media (max-width: 667px) {
+  header{ 
+    backdrop-filter: none;
+   }   
+
   header .container nav {
     position: fixed;
     bottom: 0;
