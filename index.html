@@ -23,33 +23,18 @@
       content="https://ceeriil.xyz/img/profile.png"
     />
     <meta name="twitter:site" content="ceeriil.xyz" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
-    <!-- Animation -->
-
     <!-- Custom Css -->
     <link rel="stylesheet" href="style.css" />
-    <title>Simon Cyril</title>
-
+    <title>Simon Cyril | Ceeriil Web Developer</title>
     <link rel="shortcut icon" type="image/jpg" href="img/profile.png" />
   </head>
 
   <body>
-    <div id="loading">
-      <div class="loader"></div>
-    </div>
-
     <div class="wrapper">
       <header>
         <div class="container">
@@ -77,17 +62,15 @@
               <p>Simon Cyril</p>
             </div>
           </div>
-
           <div class="hamburger" onclick="openMenu()">
             <i class="fa fa-bars" aria-hidden="true"></i>
           </div>
         </div>
       </header>
-
       <div id="banner">
         <div class="container" id="home">
           <div class="text-side">
-            <h2>
+            <h2 class="text-l">
               Hi, I'm <span style="color: #3bb78f">Simon </span
               ><span id="hand-emoji">👋🏽</span>
             </h2>
@@ -121,10 +104,9 @@
           </div>
         </div>
       </div>
-
       <section id="services">
         <div class="container">
-          <h1 class="title show-item">What I do</h1>
+          <h2 class="title show-item">What I do</h2>
           <div class="services">
             <div class="service">
               <img src="img/logos-01.png" alt="" class="service-img" />
@@ -155,15 +137,17 @@
           </button>
         </div>
       </section>
-
       <section id="works">
-        <h1 class="title">My Works</h1>
-
+        <h2 class="title">My Works</h2>
         <div id="websites">
           <h2 class="subtitle">Websites Built</h2>
           <div class="container boxes">
             <div class="box">
-              <img src="img/bigi-drink.png" alt="" class="preview" />
+              <img
+                src="img/bigi-drink.png"
+                alt="preview bigi website"
+                class="preview"
+              />
               <div class="box-info">
                 <h3>Bigi Landing Page</h3>
                 <button type="button" class="btn btn-primary">
@@ -175,7 +159,11 @@
               </div>
             </div>
             <div class="box">
-              <img src="img/easybank.png" alt="" class="preview" />
+              <img
+                src="img/easybank.png"
+                alt="preview easy bank"
+                class="preview"
+              />
               <div class="box-info">
                 <h3>EasyBank Website</h3>
                 <button type="button" class="btn btn-primary">
@@ -189,7 +177,11 @@
               </div>
             </div>
             <div class="box hidden">
-              <img src="img/biu.png" alt="" class="preview" />
+              <img
+                src="img/biu.png"
+                alt="preview biu website"
+                class="preview"
+              />
               <div class="box-info">
                 <h3>University Website</h3>
                 <button type="button" class="btn btn-primary">
@@ -203,7 +195,11 @@
               </div>
             </div>
             <div class="box hidden">
-              <img src="img/patek.png" alt="" class="preview" />
+              <img
+                src="img/patek.png"
+                alt="preview patek website"
+                class="preview"
+              />
               <div class="box-info">
                 <h3>Patek Website</h3>
                 <button type="button" class="btn btn-primary">
@@ -219,28 +215,38 @@
             <i class="fa fa-chevron-down" aria-hidden="true"></i>
           </button>
         </div>
-
         <div id="arts">
           <h2 class="subtitle show-item">Art Works</h2>
           <div class="container boxes">
             <div class="box">
-              <img src="https://ceeriil.xyz/img/arts/eye.jpg" alt="" />
+              <img
+                src="https://ceeriil.xyz/img/arts/eye.jpg"
+                alt="simon cyril arts eye"
+              />
             </div>
             <div class="box">
-              <img src="https://ceeriil.xyz/img/arts/kidd.jpg" alt="" />
+              <img
+                src="https://ceeriil.xyz/img/arts/kidd.jpg"
+                alt="simon cyril arts of kiddwaya"
+              />
             </div>
             <div class="box">
-              <img src="https://ceeriil.xyz/img/arts/nairobi.jpg" alt="" />
+              <img
+                src="https://ceeriil.xyz/img/arts/nairobi.jpg"
+                alt="simon cyril art of nairobi"
+              />
             </div>
             <div class="box">
-              <img src="https://ceeriil.xyz/img/arts/portrait.jpg" alt="" />
+              <img
+                src="https://ceeriil.xyz/img/arts/portrait.jpg"
+                alt="simon cyril artwork of a model"
+              />
             </div>
           </div>
         </div>
       </section>
-
       <section id="about">
-        <h1 class="title show-item">About Simon</h1>
+        <h2 class="title show-item">About Simon</h2>
         <div class="container">
           <div class="about-info left-item">
             <p>
@@ -267,10 +273,10 @@
             </ul>
           </div>
           <aside class="image-box">
-            <img src="img/About-profile.jpeg" alt="" />
+            <img src="img/About-profile.jpeg" alt="Simon Cyril Photo" />
           </aside>
         </div>
-        <h1 class="subtitle" id="skills">Top Skills</h1>
+        <h2 class="subtitle" id="skills">Top Skills</h2>
         <div class="container skills">
           <div class="skill">
             <div class="bars" style="width: 88%"><p>Html</p></div>
@@ -292,7 +298,6 @@
           </div>
         </div>
       </section>
-
       <section id="Contact">
         <div class="container">
           <h2 class="title show-item">Get in Touch</h2>
@@ -301,7 +306,6 @@
             collaboration or just say hi, fill up the awesome form below or send
             an email to simonorugbo@gmail.com and lets talk.
           </p>
-
           <div class="contact-card">
             <div class="innerbox" id="contact-card">
               <div class="cardfront">
@@ -341,10 +345,9 @@
           </div>
         </div>
       </section>
-
       <section id="social-media">
         <div class="container">
-          <h1>Let's Get Social</h1>
+          <h2>Let's Get Social</h2>
           <div class="social-btn">
             <a href="https://www.instagram.com/cee_riil/" target="_blank"
               ><div class="social insta zoom-item">
@@ -374,22 +377,6 @@
       </footer>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script>
-      /*   $("a").click(function (e) {
-        $("html, body").animate(
-          {
-            scrollTop: $($(this).attr("href")).offset().top,
-          },
-          1000
-        );
-      }); */
-      const load = document.getElementById("loading");
-      const loadFun = () => {
-        load.style.display = "none";
-      };
-    </script>
     <script src="index.js"></script>
   </body>
 </html>
