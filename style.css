@@ -887,6 +887,10 @@ footer {
     display: none;
   }
 
+  #banner .container .text-side h1 {
+    font-size: 1.8rem;
+  }
+
   .services,
   #websites .boxes,
   #about .container {
