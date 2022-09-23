@@ -691,6 +691,12 @@ header .container .profile-wrap .profile {
   background: transparent;
   font-family: inherit;
   margin-bottom: 1rem;
+  transition: 0.3s ease-in;
+}
+
+#Contact .input-box:focus,
+#Contact textarea:focus {
+  border-bottom: 1px solid #3bb78f;
 }
 
 #Contact .input-box::placeholder {
@@ -710,6 +716,7 @@ header .container .profile-wrap .profile {
   color: #fff;
   border-bottom: 1px solid var(--border-color2);
   resize: none;
+  transition: 0.3s ease-in;
 }
 
 #Contact textarea::placeholder {
