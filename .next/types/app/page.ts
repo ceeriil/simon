@@ -1,8 +1,8 @@
-// File: /Users/mac/Documents/simon/src/app/page.tsx
-import * as entry from '../../../src/app/page.js'
-import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
+// File: /Users/mac/Documents/simon/app/page.tsx
+import * as entry from '../../../app/page.js'
+import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../src/app/page.js')
+type TEntry = typeof import('../../../app/page.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{
@@ -19,6 +19,8 @@ checkFields<Diff<{
   
   metadata?: any
   generateMetadata?: Function
+  viewport?: any
+  generateViewport?: Function
   
 }, TEntry, ''>>()
 
@@ -29,6 +31,12 @@ checkFields<Diff<PageProps, FirstArg<TEntry['default']>, 'default'>>()
 if ('generateMetadata' in entry) {
   checkFields<Diff<PageProps, FirstArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
   checkFields<Diff<ResolvingMetadata, SecondArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
+}
+
+// Check the arguments and return type of the generateViewport function
+if ('generateViewport' in entry) {
+  checkFields<Diff<PageProps, FirstArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
+  checkFields<Diff<ResolvingViewport, SecondArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
 }
 
 // Check the arguments and return type of the generateStaticParams function

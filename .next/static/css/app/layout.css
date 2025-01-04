@@ -1,75 +1,19 @@
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/.pnpm/next@13.5.7_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[2].use[1]!./node_modules/.pnpm/next@13.5.7_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[12].oneOf[2].use[2]!./node_modules/.pnpm/next@13.5.7_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/font/google/target.css?{"path":"src/app/layout.tsx","import":"Inter","arguments":[{"subsets":["latin"]}],"variableName":"inter"} ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/* cyrillic-ext */
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@14.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[3].use[1]!./node_modules/.pnpm/next@14.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[11].oneOf[3].use[2]!./node_modules/.pnpm/next@14.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/font/local/target.css?{"path":"app/layout.tsx","import":"","arguments":[{"src":[{"path":"./fonts/Jura-Bold.ttf","weight":"700","style":"normal"}]}],"variableName":"Jura"} ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 @font-face {
-  font-family: '__Inter_d65c78';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/_next/static/media/55c55f0601d81cf3-s.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: '__Inter_d65c78';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/_next/static/media/26a46d62cd723877-s.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: '__Inter_d65c78';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/_next/static/media/97e0cb1ae144a2a9-s.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: '__Inter_d65c78';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/_next/static/media/581909926a08bbc8-s.woff2) format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: '__Inter_d65c78';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/_next/static/media/df0a9ae256c0569c-s.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: '__Inter_d65c78';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/_next/static/media/6d93bde91c0c2823-s.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: '__Inter_d65c78';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(/_next/static/media/a34f9d1faa5f3315-s.p.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}@font-face {font-family: '__Inter_Fallback_d65c78';src: local("Arial");ascent-override: 90.20%;descent-override: 22.48%;line-gap-override: 0.00%;size-adjust: 107.40%
-}.__className_d65c78 {font-family: '__Inter_d65c78', '__Inter_Fallback_d65c78';font-style: normal
+font-family: '__Jura_7bc192';
+src: url(/_next/static/media/560d14ac889b42ba-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 700;
+font-style: normal;
+}@font-face {font-family: '__Jura_Fallback_7bc192';src: local("Arial");ascent-override: 81.83%;descent-override: 18.49%;line-gap-override: 0.00%;size-adjust: 117.93%
+}.__className_7bc192 {font-family: '__Jura_7bc192', '__Jura_Fallback_7bc192';font-weight: 700;font-style: normal
 }
 
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/.pnpm/next@13.5.7_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/.pnpm/next@13.5.7_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/app/globals.css ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@14.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[13].use[2]!./node_modules/.pnpm/next@14.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[13].use[3]!./node_modules/.pnpm/next@14.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[13].use[4]!./node_modules/.pnpm/next@14.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[13].use[5]!./styles/globals.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -604,6 +548,15 @@ video {
 .mb-32 {
   margin-bottom: 8rem;
 }
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.mt-3 {
+  margin-top: 0.75rem;
+}
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
 .inline-block {
   display: inline-block;
 }
@@ -618,6 +571,9 @@ video {
 }
 .min-h-screen {
   min-height: 100vh;
+}
+.min-h-\[90h\] {
+  min-height: 90h;
 }
 .w-full {
   width: 100%;
@@ -648,6 +604,9 @@ video {
 }
 .gap-2 {
   gap: 0.5rem;
+}
+.text-balance {
+  text-wrap: balance;
 }
 .rounded-lg {
   border-radius: 0.5rem;
@@ -719,11 +678,44 @@ video {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
 .font-bold {
   font-weight: 700;
 }
 .font-semibold {
   font-weight: 600;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+.tracking-\[3rem\] {
+  letter-spacing: 3rem;
+}
+.tracking-\[0\.2rem\] {
+  letter-spacing: 0.2rem;
+}
+.tracking-\[0\.3rem\] {
+  letter-spacing: 0.3rem;
+}
+.tracking-\[0\.5rem\] {
+  letter-spacing: 0.5rem;
 }
 .opacity-50 {
   opacity: 0.5;
@@ -743,7 +735,9 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-
+.text-balance {
+    text-wrap: balance;
+  }
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -757,15 +751,9 @@ video {
     --background-end-rgb: 0, 0, 0;
   }
 }
-
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 .before\:absolute::before {
@@ -776,6 +764,11 @@ body {
 .before\:h-\[300px\]::before {
   content: var(--tw-content);
   height: 300px;
+}
+
+.before\:w-full::before {
+  content: var(--tw-content);
+  width: 100%;
 }
 
 .before\:w-\[480px\]::before {
@@ -837,6 +830,11 @@ body {
   height: 180px;
 }
 
+.after\:w-full::after {
+  content: var(--tw-content);
+  width: 100%;
+}
+
 .after\:w-\[240px\]::after {
   content: var(--tw-content);
   width: 240px;
@@ -896,6 +894,19 @@ body {
 
   .motion-reduce\:transform-none {
     transform: none;
+  }
+}
+
+@media (min-width: 640px) {
+
+  .sm\:before\:w-\[480px\]::before {
+    content: var(--tw-content);
+    width: 480px;
+  }
+
+  .sm\:after\:w-\[240px\]::after {
+    content: var(--tw-content);
+    width: 240px;
   }
 }
 
@@ -1027,6 +1038,11 @@ body {
     --tw-gradient-to: #1d4ed8 var(--tw-gradient-to-position);
   }
 
+  .before\:dark\:to-\[\#5FFFAF1F\]::before {
+    content: var(--tw-content);
+    --tw-gradient-to: #5FFFAF1F var(--tw-gradient-to-position);
+  }
+
   .before\:dark\:opacity-10::before {
     content: var(--tw-content);
     opacity: 0.1;
@@ -1043,6 +1059,18 @@ body {
     content: var(--tw-content);
     --tw-gradient-to: rgb(1 65 255 / 0)  var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-from), #0141ff var(--tw-gradient-via-position), var(--tw-gradient-to);
+  }
+
+  .after\:dark\:via-\[\#5FFFAF1F\]::after {
+    content: var(--tw-content);
+    --tw-gradient-to: rgb(95 255 175 / 0)  var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), #5FFFAF1F var(--tw-gradient-via-position), var(--tw-gradient-to);
+  }
+
+  .after\:dark\:via-\[\#5FFFAF\]::after {
+    content: var(--tw-content);
+    --tw-gradient-to: rgb(95 255 175 / 0)  var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), #5FFFAF var(--tw-gradient-via-position), var(--tw-gradient-to);
   }
 
   .after\:dark\:opacity-40::after {
@@ -1069,4 +1097,3 @@ body {
     }
   }
 }
-
