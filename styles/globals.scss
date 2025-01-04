@@ -26,6 +26,15 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.splash {
+  background-image: url("/img/bg-temp.svg"),
+    linear-gradient(90deg, #ffffff10 1px, transparent 1px),
+    linear-gradient(#ffffff00 1px, transparent 1px);
+  background-repeat: no-repeat, repeat, repeat;
+  background-size: cover, 4% 100%;
+  background-position: center, 0%, 0%;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
