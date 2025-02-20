@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const SectionAbout = () => {
   return (
-    <section>
+    <section id="#about">
       <div className="container mx-auto grid lg:grid-cols-[30%,70%] py-32 px-16 gap-5 md:pb-[16rem]">
         <div>
           <Image

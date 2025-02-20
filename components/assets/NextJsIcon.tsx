@@ -1,14 +1,15 @@
 import React from "react";
 
-export const NextJs = () => {
+export const NextJsIcon = ({ className }: { className?: string }) => {
   return (
-    <div>
+    <>
       <svg
         width="300"
         height="301"
         viewBox="0 0 300 301"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={className}
       >
         <line
           x1="95.0811"
@@ -189,6 +190,6 @@ export const NextJs = () => {
           </clipPath>
         </defs>
       </svg>
-    </div>
+    </>
   );
 };

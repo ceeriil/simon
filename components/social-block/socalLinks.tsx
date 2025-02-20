@@ -12,22 +12,22 @@ export interface ISocialLinks {
 export const socialLinks: ISocialLinks[] = [
   {
     name: "github",
-    href: "/",
+    href: "https://github.com/ceeriil",
     icon: <GithubIcon />,
   },
   {
     name: "linkedin",
-    href: "/",
+    href: "https://www.linkedin.com/in/simon-cyril/",
     icon: <LinkedinIcon />,
   },
   {
     name: "twitter",
-    href: "/",
+    href: "https://x.com/ceeriil",
     icon: <TwitterIcon />,
   },
   {
     name: "discord",
-    href: "/",
+    href: "https://discord.com/users/ceeriil",
     icon: <DiscordIcon />,
   },
 ];

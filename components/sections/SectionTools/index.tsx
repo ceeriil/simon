@@ -1,4 +1,43 @@
-import React from "react";
+import {
+  NextJsIcon,
+  ReactJsIcon,
+  CSSIcon,
+  TailwindIcon,
+  TypescriptIcon,
+  FireBaseIcon,
+} from "@/components/assets";
+
+interface ITools {
+  name: string;
+  icon: React.ReactNode;
+}
+
+const tools: ITools[] = [
+  {
+    name: "Next Js",
+    icon: <NextJsIcon className="w-[14rem] h-[14rem]" />,
+  },
+  {
+    name: "React Js",
+    icon: <ReactJsIcon className="w-[14rem] h-[14rem]" />,
+  },
+  {
+    name: "Tailwind",
+    icon: <TailwindIcon className="w-[14rem] h-[14rem]" />,
+  },
+  {
+    name: "CSS",
+    icon: <CSSIcon className="w-[14rem] h-[14rem]" />,
+  },
+  {
+    name: "Firebase",
+    icon: <FireBaseIcon className="w-[14rem] h-[14rem]" />,
+  },
+  {
+    name: "Typescript",
+    icon: <TypescriptIcon className="w-[14rem] h-[14rem]" />,
+  },
+];
 
 export const SectionTools = () => {
   return (
@@ -7,25 +46,16 @@ export const SectionTools = () => {
         <h2 className="bg-white py-1 px-4 uppercase text-xl translate-y-[-50%] text-black inline-block tracking-[0.4rem] font-medium">
           Tools
         </h2>
-        <div className="grid lg:grid-cols-3 gap-7 gap-y-7 py-16 items-center">
-          <div className="border-[#727171] border uppercase tracking-[0.35rem] text-lg py-12 px-3 bg-[#1A1A1A] items-center text-center justify-center flex border-b-4 border-b-[#fff] ">
-            Next js
-          </div>
-          <div className="border-[#727171] border uppercase tracking-[0.35rem] text-lg py-12 px-3 bg-[#1A1A1A] items-center text-center justify-center flex border-b-4 border-b-[#fff] ">
-            Reacts
-          </div>
-          <div className="border-[#727171] border uppercase tracking-[0.35rem] text-lg py-12 px-3 bg-[#1A1A1A] items-center text-center justify-center flex border-b-4 border-b-[#fff] ">
-            CSS
-          </div>
-          <div className="border-[#727171] border uppercase tracking-[0.35rem] text-lg py-12 px-3 bg-[#1A1A1A] items-center text-center justify-center flex border-b-4 border-b-[#fff] ">
-            Tailwind
-          </div>
-          <div className="border-[#727171] border uppercase tracking-[0.35rem] text-lg py-12 px-3 bg-[#1A1A1A] items-center text-center justify-center flex border-b-4 border-b-[#fff] ">
-            Firebase
-          </div>
-          <div className="border-[#727171] border uppercase tracking-[0.35rem] text-lg py-12 px-3 bg-[#1A1A1A] items-center text-center justify-center flex border-b-4 border-b-[#fff] ">
-            TypeScript
-          </div>
+        <div className="grid lg:grid-cols-3 gap-8 gap-y-7 py-16 items-center">
+          {tools.map(({ name, icon }) => (
+            <div
+              className="border-[#727171] border uppercase tracking-[0.35rem] text-lg py-12 px-3 bg-[#1A1A1A] items-center text-center justify-center flex border-b-4 border-b-[#fff] flex-col"
+              key={name}
+            >
+              {icon}
+              <p className="mt-16 mb-8">{name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

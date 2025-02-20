@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { SocialBlock } from "@/components/social-block";
 import { ScrollDownIcon } from "@/components/assets/ScrollDownIcon";
+import Link from "next/link";
 
 export const SectionHero = () => {
   return (
@@ -11,10 +12,13 @@ export const SectionHero = () => {
           <SocialBlock />
         </div>
 
-        <div className="absolute top-[80vh] right-4 text-[#FFA10B] flex space-x-2 items-center">
+        <Link
+          href={"/#about"}
+          className="absolute top-[80vh] right-4 text-[#FFA10B] flex space-x-2 items-center"
+        >
           <span className="mr-2">Scroll down</span>
           <ScrollDownIcon />
-        </div>
+        </Link>
 
         <div className="absolute top-0">
           <Image
