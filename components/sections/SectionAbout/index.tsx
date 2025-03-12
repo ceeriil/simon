@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import BlockPatternContainer from "./BlockPatternContainer";
 
 export const SectionAbout = () => {
   return (
@@ -13,10 +14,10 @@ export const SectionAbout = () => {
             height={573}
           />
         </div>
-        <div className="bg-[#131313] py-16 px-8 rounded-t-2xl border-b-8 border-white relative  grid-background-alt">
+        <div className="bg-[#131313] py-16 pb-10 px-8 rounded-t-2xl border-b-8 border-white relative  grid-background-alt">
           <div className="bg-[#FFFFFF12] absolute top-0 translate-y-[-70%] translate-x-[-50%] rounded-full w-[32rem] h-[32rem] right-[-35%] blur-[6rem] z-[0]" />
           <h2 className="text-2xl mb-6 uppercase font-[500]">About Me</h2>
-          <p className="leading-[2.0]">
+          <p className="leading-[1.8] mb-6">
             I’m a creative frontend developer with a passion for crafting
             engaging and visually appealing web experiences. With a keen eye for
             design and a deep understanding of modern web technologies, I
@@ -28,6 +29,7 @@ export const SectionAbout = () => {
             cutting-edge UI/UX principles. Let’s build the future, one pixel at
             a time.
           </p>
+          <BlockPatternContainer />
         </div>
       </div>
     </section>

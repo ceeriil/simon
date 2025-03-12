@@ -49,11 +49,14 @@ export const SectionTools = () => {
         <div className="grid lg:grid-cols-3 gap-8 gap-y-7 py-16 items-center">
           {tools.map(({ name, icon }) => (
             <div
-              className="border-[#727171] border uppercase tracking-[0.35rem] text-lg py-12 px-3 bg-[#1A1A1A] items-center text-center justify-center flex border-b-4 border-b-[#fff] flex-col f-hoverable"
+              className="border-[#727171]  uppercase tracking-[0.35rem] text-lg py-12 px-3 bg-[#1A1A1A] items-center text-center justify-center flex border-b-4 border-b-[#fff] flex-col  skill-card"
               key={name}
             >
-              {icon}
-              <p className="mt-16 mb-8">{name}</p>
+              <div className="z-10">
+                {" "}
+                {icon}
+                <p className="mt-16 mb-8">{name}</p>
+              </div>
             </div>
           ))}
         </div>

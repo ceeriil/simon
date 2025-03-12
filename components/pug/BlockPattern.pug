@@ -1,0 +1,17 @@
+.block-pattern-container(style="background-color: #111111; display: flex; align-items: center; padding: 1rem 0; width: 100%;")
+  - const pattern1 = ['w', 's', 'm', 'xs', 'xs', 'xs', 'xs', 'xs', 'w', 'xs', 'xs', 'xs', 'xs', 'xs', 'xs', 's', 's', 'xs', 'xs', 'xs', 'xs', 'xs', 'xs', 'w', 'xs', 'xs', 'xs', 'xs', 'xs', 'xs', 'w', 's', 'w-lg', 's', 'm', 'xs', 'xs', 'xs', 'w', 'xs', 'xs', 'xs', 'xs', 'xs', 'xs']
+  
+  each size in pattern1
+    case size
+      when 'xs'
+        .block(style="width: 6px; height: 12px; background-color: #666666; margin: 0 2px;")
+      when 's'
+        .block(style="width: 12px; height: 12px; background-color: #666666; margin: 0 2px;")
+      when 'm'
+        .block(style="width: 20px; height: 12px; background-color: #666666; margin: 0 2px;")
+      when 'w'
+        .block(style="width: 12px; height: 12px; background-color: #FFFFFF; margin: 0 2px;")
+      when 'w-lg'
+        .block(style="width: 30px; height: 12px; background-color: #FFFFFF; margin: 0 2px;")
+      default
+        .block(style="width: 6px; height: 12px; background-color: transparent; margin: 0 2px;")
