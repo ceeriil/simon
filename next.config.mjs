@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const withPug = require("@zeit/next-pug");
+
+const nextConfig = withPug({});
 
 export default nextConfig;
