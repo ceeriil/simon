@@ -68,7 +68,7 @@ const projects: IProject[] = [
     name: "Paystream",
     slug: "paystream",
     description:
-      "Paystream is a programmable payroll management app for admins (job owners) that automates payments and tracks worker payments",
+      "A programmable, automated payroll solution that leverages Streamflow SDK to simplify crypto payments. With built-in automation, it enables seamless payroll management—track transactions in real time, schedule payouts with precision, and eliminate payment delays. Whether paying employees, contractors, or managing token distributions, Paystream ensures recipients get paid on time, every time, with full transparency and control",
     liveLink: "https://paystreamfi.vercel.app/",
     githubLink: "https://github.com/ceeriil/paystream",
     tag: "Open Source",

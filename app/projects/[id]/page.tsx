@@ -33,7 +33,7 @@ export default function ProjectDetails({ params }: ProjectParams) {
         <SectionProjectCollaborators project={project} />
         <SectionProjectSnapshots project={project} />
       </div>
-      <SectionPrevNextNavigation />
+      <SectionPrevNextNavigation currentSlug={params.id}/>
     </div>
   );
 }

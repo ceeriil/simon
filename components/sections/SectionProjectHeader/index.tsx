@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { IProject } from "@/data/projects";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface ISectionProjectHeaderProps {
   projects: IProject;
@@ -10,6 +13,8 @@ interface ISectionProjectHeaderProps {
 export const SectionProjectHeader: React.FC<ISectionProjectHeaderProps> = ({
   projects,
 }) => {
+  const router = useRouter();
+
   return (
     <>
       <div className="py-7 border-b border-[#ffffff90]"></div>
@@ -22,7 +27,10 @@ export const SectionProjectHeader: React.FC<ISectionProjectHeaderProps> = ({
             className="object-cover"
           />
           <div className="absolute  z-10 py-4 top-0 px-5 flex justify-between items-center w-full ">
-            <button className="bg-white text-black py-1 text-lg uppercase px-6 font-semibold">
+            <button
+              className="bg-white text-black py-1 text-lg uppercase px-6 font-semibold"
+              onClick={() => router.back()}
+            >
               Back
             </button>
             <Link

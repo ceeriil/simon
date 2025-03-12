@@ -1,10 +1,9 @@
 import React from "react";
 
-export const SmilingFace = () => {
+export const SmilingFace = ({ className = "w-48 h-48" }) => {
   return (
     <svg
-      width="274"
-      height="274"
+      className={className}
       viewBox="0 0 274 274"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
