@@ -4,7 +4,7 @@ import Image from "next/image";
 export const SectionAbout = () => {
   return (
     <section id="#about">
-      <div className="container mx-auto grid lg:grid-cols-[30%,70%] py-32 px-16 gap-5 md:pb-[16rem]">
+      <div className="container mx-auto grid lg:grid-cols-[30%,70%] lg:py-32 py-10 lg:px-16 gap-5 md:pb-[16rem] px-5">
         <div>
           <Image
             src="/img/ceeriil.svg"
@@ -14,8 +14,8 @@ export const SectionAbout = () => {
           />
         </div>
         <div className="bg-[#131313] py-16 px-8 rounded-t-2xl border-b-8 border-white">
-          <h2 className="text-xl mb-6 uppercase">ABout Me</h2>
-          <p>
+          <h2 className="text-2xl mb-6 uppercase font-[500]">About Me</h2>
+          <p className="leading-[2.0]">
             I’m a creative frontend developer with a passion for crafting
             engaging and visually appealing web experiences. With a keen eye for
             design and a deep understanding of modern web technologies, I

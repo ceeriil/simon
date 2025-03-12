@@ -42,14 +42,14 @@ const tools: ITools[] = [
 export const SectionTools = () => {
   return (
     <section className="border-t ">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <h2 className="bg-white py-1 px-4 uppercase text-xl translate-y-[-50%] text-black inline-block tracking-[0.4rem] font-medium">
           Tools
         </h2>
         <div className="grid lg:grid-cols-3 gap-8 gap-y-7 py-16 items-center">
           {tools.map(({ name, icon }) => (
             <div
-              className="border-[#727171] border uppercase tracking-[0.35rem] text-lg py-12 px-3 bg-[#1A1A1A] items-center text-center justify-center flex border-b-4 border-b-[#fff] flex-col"
+              className="border-[#727171] border uppercase tracking-[0.35rem] text-lg py-12 px-3 bg-[#1A1A1A] items-center text-center justify-center flex border-b-4 border-b-[#fff] flex-col f-hoverable"
               key={name}
             >
               {icon}

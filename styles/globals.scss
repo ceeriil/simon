@@ -25,6 +25,14 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -121,6 +129,42 @@ p {
   transform: rotate(-45deg);
   width: var(--ui-notch-hypotenuse);
   z-index: 100;
+}
+
+.f-hoverable {
+  position: relative;
+  padding: 0.75em;
+}
+
+.f-hoverable::before,
+.f-hoverable::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.f-hoverable::before {
+  border-top: 0.15em solid #fff;
+  border-left: 0.15em solid #fff;
+  transform: scale3d(1, 0.1, 1);
+  left: 0;
+  transform-origin: top lef t;
+}
+.f-hoverable::after {
+  border-right: 0.15em solid #fff;
+  border-top: 0.15em solid #fff;
+  left: 0;
+  transform: scale3d(0.1, 1, 1);
+  height: 2.4rem;
+  transform-origin: top right;
+}
+.f-hoverable:hover::before,
+.f-hoverable:hover::after {
+  transform: scale3d(1, 1, 1);
+  transition: transform 900ms;
 }
 
 @layer utilities {
