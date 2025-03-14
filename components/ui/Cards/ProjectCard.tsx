@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "next-transition-router";
 import Image from "next/image";
 
 interface IProjectCardProps {
@@ -14,10 +14,12 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
   slug,
 }) => {
   return (
-    <div className="grid lg:grid-cols-[45%,50%] gap-[5rem] py-16 items-center">
+    <div className="grid lg:grid-cols-[45%,50%] gap-[5rem] py-10 items-center gap-y-8">
       <Image src={"/img/card.svg"} alt="card" width={653} height={338} />
       <div>
-        <h2 className="uppercase text-2xl mb-3">{name}</h2>
+        <h2 className="uppercase text-2xl mb-3 tracking-[0.25rem] font-semibold">
+          {name}
+        </h2>
         <p>{description}</p>
         <Link
           href={`/projects/${slug}`}

@@ -73,7 +73,12 @@ const projects: IProject[] = [
     githubLink: "https://github.com/ceeriil/paystream",
     tag: "Open Source",
     projectTags: ["Defi", "Next.js", "Streamflow SDK", "Solana"],
-    snapshots: [],
+    snapshots: [
+      {
+        url: "/img/paystream.png",
+        name: "Paystream home",
+      },
+    ],
     demoVideo: null,
     collaborators: [],
     awards: [],

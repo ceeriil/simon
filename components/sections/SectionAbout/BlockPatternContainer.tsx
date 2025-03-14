@@ -1,7 +1,6 @@
 import React from "react";
 
 const BlockPatternContainer: React.FC = () => {
-  // Define the pattern array
   const pattern1 = [
     "w",
     "s",
@@ -50,7 +49,6 @@ const BlockPatternContainer: React.FC = () => {
     "xs",
   ];
 
-  // Function to render a block based on its size
   const renderBlock = (size: string, index: number) => {
     const baseStyle = {
       backgroundColor: "#666666",

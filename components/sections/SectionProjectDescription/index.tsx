@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { Tag } from "@/components/assets/Tag";
 import { ArrowLink } from "@/components/assets/ArrowLink";
 import { IProject } from "@/data/projects";
+import { Tag } from "@/components/Tag/Tag";
 
 interface ISectionProjectDescriptionProps {
   projects: IProject;
@@ -17,7 +17,7 @@ export const SectionProjectDescription: React.FC<
         {projects.name}
       </h2>
       <div className="py-4 mb-2">
-        <Tag />
+        <Tag tag={projects.tag} />
       </div>
       <p className="py-2 text-lg lg:pr-8">{projects.description}</p>
       <Link

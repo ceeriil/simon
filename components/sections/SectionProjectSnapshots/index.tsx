@@ -20,15 +20,19 @@ export const SectionProjectSnapshots: React.FC<
           Project screenshots
         </h2>
       </div>
-      <div className="py-8 border-l border-r border-[#ffffff90] container mx-auto ">
-        <div className=" grid mx-auto gap-2">
-          <div className=" mx-4 border uppercase tracking-[0.35rem] text-xl text-white py-5 px-3 bg-[#1A1A1A] text-center border-[#4AFFA4] border-dashed min-h-[30rem]">
-            <Image
-              width={1000}
-              height={400}
-              alt={project.snapshots[0].name}
-              src={project.snapshots[0].url}
-            />
+      <div className="py-8 border-l border-r border-[#ffffff90] container mx-auto px-16 ">
+        <div className=" grid mx-auto gap-2 pb-12">
+          <div className=" mx-4 my-4 uppercase tracking-[0.35rem] text-xl text-white p-5 bg-[#1A1A1A] text-center border-[#4AFFA4]  image-container relative custom-dashed-border">
+            <div className="img-border-l"></div>
+            <div className="img-border-r"></div>
+            <div className="  border uppercase tracking-[0.35rem] text-xl text-white  p-4 bg-[#1A1A1A] text-center border-[#4AFFA4] min-h-[35rem] relative">
+              <Image
+                fill
+                className="object-cover absolute"
+                alt={project.snapshots[0].name}
+                src={project.snapshots[0].url}
+              />
+            </div>
           </div>
         </div>
       </div>

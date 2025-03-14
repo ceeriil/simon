@@ -20,7 +20,7 @@ export const SectionHero = () => {
           <ScrollDownIcon />
         </Link>
 
-        <div className="absolute lg:top-0 top-[5rem]">
+        <div className="absolute lg:top-0 top-[4rem]">
           <Image
             src="/img/ceeriil.png"
             width={805}
@@ -29,9 +29,12 @@ export const SectionHero = () => {
           />
         </div>
 
-        <div className="border border-dashed border-[#4AFFA4] px-4 text-center lg:py-10 py-5 max-w-[40rem] bg-[#4AFFA417] z-10 mx-3 lg:mx-0">
-          <h2 className="text-2xl">
-            Creative front-end developer Building beautiful experiences for web3
+        <div className="border border-dashed border-[#4AFFA4] px-4 text-center lg:py-10 py-5 max-w-[47rem] bg-[#4AFFA417] z-10 mx-3 lg:mx-0 hero-box lg:w-[45rem]">
+          <div className="hero-box-border"></div>
+          <div className="hero-box-border-2"></div>
+          <h2 className="text-2xl tracking-[0.1rem] fomt-medium">
+            Creative front-end developer <br /> Building beautiful experiences
+            for web3
           </h2>
         </div>
       </div>

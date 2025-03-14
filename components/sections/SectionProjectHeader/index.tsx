@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { IProject } from "@/data/projects";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useTransitionRouter } from "next-transition-router";
 
 interface ISectionProjectHeaderProps {
   projects: IProject;
@@ -13,7 +13,7 @@ interface ISectionProjectHeaderProps {
 export const SectionProjectHeader: React.FC<ISectionProjectHeaderProps> = ({
   projects,
 }) => {
-  const router = useRouter();
+  const router = useTransitionRouter();
 
   return (
     <>

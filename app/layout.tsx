@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Jura } from "next/font/google";
 import "../styles/globals.scss";
 import SmoothScrolling from "@/components/utils/smooth-scrolling/smooth-scrolling";
+import { Providers } from "./providers";
+import AudioPlayer from "@/components/AudioPlayer";
 
 const jura = Jura({
   subsets: ["latin"],
@@ -14,6 +16,14 @@ export const metadata: Metadata = {
   description: "Portfolio of Developer Ceeriil",
 };
 
+const songs = [
+  {
+    title: "Can you feel my heart",
+    artist: "Yung Kage, Yumi, Softwilly, Larry Crotch",
+    url: "/audio/guitars.mp3",
+  },
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,7 +32,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <SmoothScrolling>
-        <body className={jura.className}>{children}</body>
+        <body className={jura.className}>
+          <Providers>
+            {children}
+            <AudioPlayer songs={songs} />
+          </Providers>
+        </body>
       </SmoothScrolling>
     </html>
   );

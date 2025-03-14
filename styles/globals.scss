@@ -131,6 +131,59 @@ p {
   z-index: 100;
 }
 
+.hero-box {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 12px,
+    #146f4220 12px,
+    #146f4220 14.5px
+  );
+  position: relative;
+}
+
+.hero-box:after,
+.hero-box:before,
+.hero-box-border,
+.hero-box-border-2 {
+  content: " ";
+  width: 2.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: 0px solid #fff;
+  transition: all 1s;
+}
+.hero-box:after {
+  top: -1px;
+  left: -1px;
+  border-top: 4px solid #4affa4;
+  border-left: 4px solid #4affa4;
+}
+.hero-box:before {
+  top: -1px;
+  right: -1px;
+  border-right: 4px solid #4affa4;
+  border-top: 4px solid #4affa4;
+}
+
+.hero-box-border {
+  bottom: -1px;
+  left: -1px;
+  border-left: 4px solid #4affa4;
+  border-bottom: 4px solid #4affa4;
+}
+.hero-box-border-2 {
+  bottom: -1px;
+  right: -1px;
+  border-right: 4px solid #ffa10b;
+  border-bottom: 4px solid #ffa10b;
+}
+.skill-card:hover:before,
+.skill-card:hover:after {
+  width: 100%;
+  height: 100%;
+}
+
 .f-hoverable {
   position: relative;
   padding: 0.75em;
@@ -200,13 +253,16 @@ p {
   border-left: 3px solid #ff9d00;
 }
 
-/* Alternative approach using pseudo-elements for more control */
 .grid-background-alt {
   background-color: #121212;
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+.grid-background-alt.loader {
+  position: fixed;
 }
 
 .grid-background-alt::before,
@@ -240,6 +296,47 @@ p {
     linear-gradient(to right, rgba(40, 40, 40, 0.5) 1px, transparent 1px);
   background-size: 16.66% 33.33%;
   background-position: 0 6px, 6px 0;
+}
+
+/* skill card */
+.grid-background {
+  background-color: #121212;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.grid-background::before,
+.grid-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100%);
+}
+
+.grid-background::before {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(40, 40, 40, 0.5) 0.8px,
+      transparent 0.8px
+    ),
+    linear-gradient(to right, rgba(40, 40, 40, 0.5) 0.8px, transparent 0.8px);
+  background-size: 33.3% 33.33%;
+}
+
+.grid-background::after {
+  top: -1rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(40, 40, 40, 0.5) 0.8px,
+      transparent 0.8px
+    ),
+    linear-gradient(to right, rgba(40, 40, 40, 0.5) 0.8px, transparent 0.8px);
+  background-size: 33.3% 33.33%;
+  background-position: 0 8px, 6px 0;
 }
 
 .skill-card {
@@ -277,6 +374,49 @@ p {
 .skill-card:hover:after {
   width: 100%;
   height: 100%;
+}
+
+/* @Project Snaphots */
+
+.image-container:after,
+.image-container:before,
+.img-border-r,
+.img-border-l {
+  content: " ";
+  width: 4.5rem;
+  height: 4.5rem;
+  position: absolute;
+  border: 0px solid #fff;
+  transition: all 1s;
+}
+.image-container:after {
+  top: -1.5rem;
+  left: -1.5rem;
+  border-top: 4px solid #4affa4;
+  border-left: 4px solid #4affa4;
+}
+.image-container:before {
+  top: -1.5rem;
+  right: -1.5rem;
+  border-right: 4px solid #ffa10b;
+  border-top: 4px solid #ffa10b;
+}
+
+.img-border-r {
+  bottom: -1.5rem;
+  left: -1.5rem;
+  border-left: 4px solid #4affa4;
+  border-bottom: 4px solid #4affa4;
+}
+.img-border-l {
+  bottom: -1.5rem;
+  right: -1.5rem;
+  border-right: 4px solid #4affa4;
+  border-bottom: 4px solid #4affa4;
+}
+
+.custom-dashed-border {
+  border: 1px solid #fff;
 }
 
 @layer utilities {
