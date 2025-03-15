@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { FaPause, FaPlay } from "react-icons/fa6";
@@ -117,16 +118,16 @@ const AudioPlayer = ({ songs }: { songs: Isongs[] }) => {
         draggable="false"
         className={`${RecordPlayer} ${expandDisk ? "" : Minimize} `}
       />
-
-      <Image
-        src="/img/record.png"
-        alt="Record Player"
-        width={120}
-        height={120}
-        draggable="false"
-        className={`${RecordPlayer} ${!isPlaying ? "" : Rotate} `}
-        onClick={() => setExpandDisk(!expandDisk)}
-      />
+      <button type="button" onClick={() => setExpandDisk(!expandDisk)}>
+        <Image
+          src="/img/record.png"
+          alt="Record Player"
+          width={120}
+          height={120}
+          draggable="false"
+          className={`${RecordPlayer} ${!isPlaying ? "" : Rotate} `}
+        />
+      </button>
     </div>
   );
 };

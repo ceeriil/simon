@@ -12,7 +12,7 @@ export const SectionProjectDescription: React.FC<
   ISectionProjectDescriptionProps
 > = ({ projects }) => {
   return (
-    <section className=" relative container mx-auto border border-[#ffffff90] border-t-0 border-b-0 px-12 py-20 ">
+    <section className=" relative container mx-auto border border-[#ffffff90] border-t-0 border-b-0 lg:px-12 py-20 px-5 ">
       <h2 className="text-3xl uppercase mb-3  tracking-[0.4rem] font-[600]">
         {projects.name}
       </h2>
@@ -22,7 +22,7 @@ export const SectionProjectDescription: React.FC<
       <p className="py-2 text-lg lg:pr-8">{projects.description}</p>
       <Link
         href="/"
-        className="inline-flex text-[#4AFFA4] mt-12 text-xl uppercase tracking-[0.35rem] space-x-5"
+        className="inline-flex text-primary mt-12 lg:text-xl uppercase lg:tracking-[0.35rem] tracking-[0.25rem] space-x-5 text-lg font-semibold"
       >
         <ArrowLink />
         <span>Visit Live Project</span>

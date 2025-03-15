@@ -95,7 +95,7 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ delay: 0.6, duration: 0.4 }}
               >
-                <button className="border-[#4AFFA4] text-[#4AFFA4] py-2.5 px-6 border-2 mt-4 uppercase text-sm tracking-[0.25rem]">
+                <button className="border-primary text-primary py-2.5 px-6 border-2 mt-4 uppercase text-sm tracking-[0.25rem]">
                   Get In Touch
                 </button>
                 <div className="mt-8 text-lg font-medium lg:hidden">

@@ -32,7 +32,7 @@ export const ContactForm: React.FC = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full p-2 border-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#4AFFA4]  border-[#3D3D3D]"
+          className="w-full p-2 border-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary  border-[#3D3D3D]"
         />
       </div>
       <div className="mb-4">
@@ -45,12 +45,12 @@ export const ContactForm: React.FC = () => {
           value={formData.message}
           onChange={handleChange}
           required
-          className="w-full p-2 border-2 border-[#3D3D3D]  focus:outline-none focus:ring-2 focus:ring-[#4AFFA4] bg-transparent h-48 resize-none"
+          className="w-full p-2 border-2 border-[#3D3D3D]  focus:outline-none focus:ring-2 focus:ring-primary bg-transparent h-48 resize-none"
         ></textarea>
       </div>
       <button
         type="submit"
-        className="border-[#4AFFA4] text-[#4AFFA4] py-2.5 px-4 border-2  uppercase text-sm inline-block tracking-[0.2rem]"
+        className="border-primary text-primary py-2.5 px-4 border-2  uppercase text-sm inline-block tracking-[0.2rem]"
       >
         Let’s Get Started
       </button>

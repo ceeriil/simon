@@ -19,7 +19,7 @@ export const SectionProjectHeader: React.FC<ISectionProjectHeaderProps> = ({
     <>
       <div className="py-7 border-b border-[#ffffff90]"></div>
       <section>
-        <div className="h-[20rem] relative container mx-auto border border-[#ffffff90] border-t-0 border-b-0 ">
+        <div className="lg:h-[20rem] h-[18rem] relative container mx-auto border border-[#ffffff90] border-t-0 border-b-0 ">
           <Image
             src={"/img/project.svg"}
             alt="Project Image"
@@ -35,7 +35,7 @@ export const SectionProjectHeader: React.FC<ISectionProjectHeaderProps> = ({
             </button>
             <Link
               href={projects.githubLink}
-              className="bg-[#ffffff25]  text-white py-1 text-lg uppercase px-6 font-semibold border-white border"
+              className="bg-[#ffffff25]  text-white py-1 text-lg uppercase px-6 font-semibold border-white border hidden"
             >
               View github project
             </Link>

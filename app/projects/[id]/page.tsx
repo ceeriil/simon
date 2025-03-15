@@ -24,7 +24,7 @@ export default function ProjectDetails({ params }: ProjectParams) {
   }
 
   return (
-    <div className="px-6">
+    <div className="lg:px-6 px-3">
       <SectionProjectHeader projects={project} />
       <div className="border-t border-[#ffffff90]">
         <SectionProjectDescription projects={project} />
@@ -33,7 +33,7 @@ export default function ProjectDetails({ params }: ProjectParams) {
         <SectionProjectCollaborators project={project} />
         <SectionProjectSnapshots project={project} />
       </div>
-      <SectionPrevNextNavigation currentSlug={params.id}/>
+      <SectionPrevNextNavigation currentSlug={params.id} />
     </div>
   );
 }

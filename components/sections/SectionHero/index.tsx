@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const SectionHero = () => {
   return (
-    <section>
+    <section id="#">
       <div className="container mx-auto flex items-center flex-col lg:min-h-[1100px] min-h-[95vh] uppercase justify-center overflow-hidden relative">
         <div className="absolute left-0 top-[10rem] hidden lg:block">
           <SocialBlock />
@@ -29,7 +29,7 @@ export const SectionHero = () => {
           />
         </div>
 
-        <div className="border border-dashed border-[#4AFFA4] px-4 text-center lg:py-10 py-5 max-w-[47rem] bg-[#4AFFA417] z-10 mx-3 lg:mx-0 hero-box lg:w-[45rem]">
+        <div className="border border-dashed border-primary px-4 text-center lg:py-10 py-5 max-w-[47rem] bg-[#4AFFA417] z-10 mx-3 lg:mx-0 hero-box lg:w-[45rem]">
           <div className="hero-box-border"></div>
           <div className="hero-box-border-2"></div>
           <h2 className="text-2xl tracking-[0.1rem] fomt-medium">

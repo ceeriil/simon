@@ -2,7 +2,6 @@
   position: fixed;
   bottom: 3rem;
   left: 7rem;
-  /*   transform: translateX(-50%); */
   z-index: 20;
   display: flex;
   align-items: center;
@@ -12,11 +11,8 @@
   align-items: center;
   width: 25rem;
   height: 4rem;
-  background-color: #454545;
   background: linear-gradient(to right, #1d1d1d, #454545);
-
   border: 1px solid #fff;
-
   padding: 1.8rem 2rem;
   transform-origin: left;
   transition: 0.8s ease-in;
@@ -87,7 +83,7 @@
 
 .RecordPlayer:last-of-type {
   animation: rotate 2s linear infinite paused;
-  transform-origin: center center; /* Set the rotation origin to the center */
+  transform-origin: center center;
 }
 
 .RecordPlayer:last-of-type.Rotate {

@@ -31,14 +31,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <SmoothScrolling>
-        <body className={jura.className}>
-          <Providers>
-            {children}
-            <AudioPlayer songs={songs} />
-          </Providers>
-        </body>
-      </SmoothScrolling>
+      {/*       <SmoothScrolling>
+       */}{" "}
+      <body className={jura.className}>
+        <Providers>
+          {children}
+          <AudioPlayer songs={songs} />
+        </Providers>
+      </body>
+      {/*   </SmoothScrolling> */}
     </html>
   );
 }

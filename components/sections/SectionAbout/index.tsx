@@ -5,7 +5,7 @@ import BlockPatternContainer from "./BlockPatternContainer";
 export const SectionAbout = () => {
   return (
     <section id="#about">
-      <div className="container mx-auto grid lg:grid-cols-[30%,70%] lg:py-32 py-10 lg:px-24 gap-5 pb-32 lg:pb-[16rem] px-4">
+      <div className="container mx-auto grid lg:grid-cols-[30%,70%] lg:py-32 py-10  gap-5 pb-32 lg:pb-[16rem] px-4">
         <div className="flex items-center">
           <Image
             src="/img/ceeriil.svg"

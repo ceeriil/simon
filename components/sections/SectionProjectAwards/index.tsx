@@ -20,7 +20,7 @@ export const SectionProjectAwards: React.FC<ISectionProjectAwardsProps> = ({
         </h2>
       </div>
 
-      <div className="py-8 border-l border-r border-[#ffffff90] container mx-auto pb-32">
+      <div className="py-8 border-l border-r border-[#ffffff90] container mx-auto lg:pb-32 pb-20">
         <div className=" grid mx-auto gap-2">
           {projects.awards.map((award) => (
             <div

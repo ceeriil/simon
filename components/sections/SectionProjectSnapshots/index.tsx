@@ -22,10 +22,10 @@ export const SectionProjectSnapshots: React.FC<
       </div>
       <div className="py-8 border-l border-r border-[#ffffff90] container mx-auto px-16 ">
         <div className=" grid mx-auto gap-2 pb-12">
-          <div className=" mx-4 my-4 uppercase tracking-[0.35rem] text-xl text-white p-5 bg-[#1A1A1A] text-center border-[#4AFFA4]  image-container relative custom-dashed-border">
+          <div className=" mx-4 my-4 uppercase tracking-[0.35rem] text-xl text-white p-5 bg-[#1A1A1A] text-center border-primary  image-container relative custom-dashed-border">
             <div className="img-border-l"></div>
             <div className="img-border-r"></div>
-            <div className="  border uppercase tracking-[0.35rem] text-xl text-white  p-4 bg-[#1A1A1A] text-center border-[#4AFFA4] min-h-[35rem] relative">
+            <div className="  border uppercase tracking-[0.35rem] text-xl text-white  p-4 bg-[#1A1A1A] text-center border-primary min-h-[35rem] relative">
               <Image
                 fill
                 className="object-cover absolute"

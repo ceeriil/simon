@@ -23,7 +23,7 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
         <p>{description}</p>
         <Link
           href={`/projects/${slug}`}
-          className="border-[#4AFFA4] text-[#4AFFA4] py-2.5 px-6 border-2 mt-4 uppercase text-sm inline-block"
+          className="border-pimary text-primary py-2.5 px-6 border-2 mt-4 uppercase text-sm inline-block"
         >
           View Project
         </Link>

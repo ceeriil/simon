@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import projects from "@/data/projects";
 import { getPrevNextProject } from "@/components/utils/utils";
 
 interface SectionPrevNextNavigationProps {
@@ -18,7 +17,7 @@ export const SectionPrevNextNavigation: React.FC<
         {prevProject ? (
           <Link
             href={`/projects/${prevProject.slug}`}
-            className="border-[#4AFFA4] text-[#4AFFA4] py-2.5 px-6 border-2 mt-4 uppercase text-sm inline-block bg-[#061E23] tracking-[0.35rem]"
+            className="border-primary text-primary py-2.5 px-6 border-2 mt-4 uppercase text-sm inline-block bg-[#061E23] tracking-[0.35rem]"
           >
             Previous
           </Link>
@@ -29,7 +28,7 @@ export const SectionPrevNextNavigation: React.FC<
         {nextProject ? (
           <Link
             href={`/projects/${nextProject.slug}`}
-            className="border-[#4AFFA4] text-[#4AFFA4] py-2.5 px-6 border-2 mt-4 uppercase text-sm inline-block bg-[#061E23] tracking-[0.35rem]"
+            className="border-primary text-primary py-2.5 px-6 border-2 mt-4 uppercase text-sm inline-block bg-[#061E23] tracking-[0.35rem]"
           >
             Next
           </Link>

@@ -2,35 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ----------- Import Fonts ------------ */
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
+/* ----------- CSS Variables ------------ */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
   --ui-notch-amount: 0.2rem;
-  --ui-notch-hypotenuse: 12.627416px; /* hypothenuse of --ui-notch-amount */
+  --ui-notch-hypotenuse: 12.627416px;
   --ui-notch-path: polygon(
     0 0,
     100% 0,
     100% calc(100% - var(--ui-notch-amount) + 2px)
   );
+  --color-primary: #4affa4;
+  --color-secondary: #ffa10b;
+  --color-dark-translucent: rgba(40, 40, 40, 0.5);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -59,78 +52,7 @@ p {
   background-position: center, 0%, 0%;
 }
 
-/* @component: button */
-.button {
-  background-color: transparent;
-  border: 1px solid #fff;
-  border-radius: 2px;
-  cursor: pointer;
-  color: #fff;
-  display: inline-block;
-  letter-spacing: 0.045em;
-  padding: 0.45rem;
-  text-align: left;
-  text-transform: uppercase;
-  font-size: 0.5rem;
-  margin-top: 3rem;
-}
-
-.button__content {
-  display: inline-block;
-  z-index: 2;
-}
-
-.button--size-lg,
-.button--size-xl {
-  border-width: 2px;
-  clip-path: var(--ui-notch-path);
-  padding: 0.55rem 0.7rem 0.7rem 0.55rem;
-}
-
-.button--size-lg::before,
-.button--size-xl::before {
-  background-color: currentcolor;
-  bottom: 5px;
-  content: "";
-  display: block;
-  height: 3px;
-  position: absolute;
-  right: -6px;
-  top: auto;
-  transform: rotate(-45deg);
-  width: var(--ui-notch-hypotenuse);
-  z-index: 100;
-}
-
-.button--size-xl {
-  padding: 0.55rem 1.5rem 1.5rem 0.55rem;
-}
-
-.button--primary {
-  color: var(--colors-secondary--500);
-  border-color: var(--colors-secondary--500);
-}
-
-.btn-primary {
-  border-width: 2px;
-  clip-path: var(--ui-notch-path);
-  padding: 0.55rem 0.7rem 0.7rem 0.55rem;
-}
-
-.btn-primary::before {
-  background-color: currentcolor;
-  bottom: 5px;
-  content: "";
-  display: block;
-  height: 3px; /* bigger to compensate transform */
-  position: absolute;
-  right: -6px;
-  top: auto;
-  transform: rotate(-45deg);
-  width: var(--ui-notch-hypotenuse);
-  z-index: 100;
-}
-
+/* @component: SectionHero */
 .hero-box {
   background-image: repeating-linear-gradient(
     45deg,
@@ -140,244 +62,228 @@ p {
     #146f4220 14.5px
   );
   position: relative;
+
+  &:after,
+  &:before,
+  .hero-box-border,
+  .hero-box-border-2 {
+    content: " ";
+    width: 2.5rem;
+    height: 1.5rem;
+    position: absolute;
+    border: 0px solid white;
+    transition: all 1s;
+  }
+
+  &:after {
+    top: -1px;
+    left: -1px;
+    border-top: 4px solid var(--color-primary);
+    border-left: 4px solid var(--color-primary);
+  }
+
+  &:before {
+    top: -1px;
+    right: -1px;
+    border-right: 4px solid var(--color-primary);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .hero-box-border {
+    bottom: -1px;
+    left: -1px;
+    border-left: 4px solid var(--color-primary);
+    border-bottom: 4px solid var(--color-primary);
+  }
+
+  .hero-box-border-2 {
+    bottom: -1px;
+    right: -1px;
+    border-right: 4px solid var(--color-secondary);
+    border-bottom: 4px solid var(--color-secondary);
+  }
 }
 
-.hero-box:after,
-.hero-box:before,
-.hero-box-border,
-.hero-box-border-2 {
-  content: " ";
-  width: 2.5rem;
-  height: 1.5rem;
-  position: absolute;
-  border: 0px solid #fff;
-  transition: all 1s;
-}
-.hero-box:after {
-  top: -1px;
-  left: -1px;
-  border-top: 4px solid #4affa4;
-  border-left: 4px solid #4affa4;
-}
-.hero-box:before {
-  top: -1px;
-  right: -1px;
-  border-right: 4px solid #4affa4;
-  border-top: 4px solid #4affa4;
+/* @component: Menu */
+.menu-inner {
+  * {
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: inherit;
+    left: 0;
+    height: 45%;
+    z-index: 0;
+    top: 3rem;
+    border-left: 3px solid var(--color-primary);
+  }
+
+  .cut-box {
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      background-color: inherit;
+      left: 0;
+      height: 90%;
+      z-index: 99;
+      top: 0;
+      border-left: 3px solid var(--color-secondary);
+    }
+  }
 }
 
-.hero-box-border {
-  bottom: -1px;
-  left: -1px;
-  border-left: 4px solid #4affa4;
-  border-bottom: 4px solid #4affa4;
-}
-.hero-box-border-2 {
-  bottom: -1px;
-  right: -1px;
-  border-right: 4px solid #ffa10b;
-  border-bottom: 4px solid #ffa10b;
-}
-.skill-card:hover:before,
-.skill-card:hover:after {
-  width: 100%;
-  height: 100%;
-}
-
-.f-hoverable {
-  position: relative;
-  padding: 0.75em;
-}
-
-.f-hoverable::before,
-.f-hoverable::after {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-}
-.f-hoverable::before {
-  border-top: 0.15em solid #fff;
-  border-left: 0.15em solid #fff;
-  transform: scale3d(1, 0.1, 1);
-  left: 0;
-  transform-origin: top lef t;
-}
-.f-hoverable::after {
-  border-right: 0.15em solid #fff;
-  border-top: 0.15em solid #fff;
-  left: 0;
-  transform: scale3d(0.1, 1, 1);
-  height: 2.4rem;
-  transform-origin: top right;
-}
-.f-hoverable:hover::before,
-.f-hoverable:hover::after {
-  transform: scale3d(1, 1, 1);
-  transition: transform 900ms;
-}
-
-.menu-inner * {
-  z-index: 2;
-}
-
-.menu-inner::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  background-color: inherit;
-  left: 0;
-  height: 45%;
-  z-index: 0;
-  top: 3rem;
-  border-left: 3px solid #4affa4;
-}
-
-.cut-box {
-  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
-  position: relative;
-}
-
-.cut-box::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  background-color: inherit;
-  left: 0;
-  height: 90%;
-  z-index: 99;
-  top: 0;
-  border-left: 3px solid #ff9d00;
-}
-
+/* @component: SectionAbout */
 .grid-background-alt {
   background-color: #121212;
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
+
+  &.loader {
+    position: fixed;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 1rem);
+  }
+
+  &::before {
+    top: -1rem;
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dark-translucent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to right,
+        var(--color-dark-translucent) 1px,
+        transparent 1px
+      );
+    background-size: 16.66% 33.33%;
+  }
+
+  &::after {
+    top: -1rem;
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dark-translucent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to right,
+        var(--color-dark-translucent) 1px,
+        transparent 1px
+      );
+    background-size: 16.66% 33.33%;
+    background-position: 0 6px, 6px 0;
+  }
 }
 
-.grid-background-alt.loader {
-  position: fixed;
-}
-
-.grid-background-alt::before,
-.grid-background-alt::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100% + 1rem);
-}
-
-.grid-background-alt::before {
-  top: -1rem;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(40, 40, 40, 0.5) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to right, rgba(40, 40, 40, 0.5) 1px, transparent 1px);
-  background-size: 16.66% 33.33%;
-}
-
-.grid-background-alt::after {
-  top: -1rem;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(40, 40, 40, 0.5) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to right, rgba(40, 40, 40, 0.5) 1px, transparent 1px);
-  background-size: 16.66% 33.33%;
-  background-position: 0 6px, 6px 0;
-}
-
-/* skill card */
+/*  @component: ToolBox */
 .grid-background {
   background-color: #121212;
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
 
-.grid-background::before,
-.grid-background::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100%);
-}
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100%);
+  }
 
-.grid-background::before {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(40, 40, 40, 0.5) 0.8px,
-      transparent 0.8px
-    ),
-    linear-gradient(to right, rgba(40, 40, 40, 0.5) 0.8px, transparent 0.8px);
-  background-size: 33.3% 33.33%;
-}
+  &::before {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dark-translucent) 0.8px,
+        transparent 0.8px
+      ),
+      linear-gradient(
+        to right,
+        var(--color-dark-translucent) 0.8px,
+        transparent 0.8px
+      );
+    background-size: 33.3% 33.33%;
+  }
 
-.grid-background::after {
-  top: -1rem;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(40, 40, 40, 0.5) 0.8px,
-      transparent 0.8px
-    ),
-    linear-gradient(to right, rgba(40, 40, 40, 0.5) 0.8px, transparent 0.8px);
-  background-size: 33.3% 33.33%;
-  background-position: 0 8px, 6px 0;
+  &::after {
+    top: -1rem;
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dark-translucent) 0.8px,
+        transparent 0.8px
+      ),
+      linear-gradient(
+        to right,
+        var(--color-dark-translucent) 0.8px,
+        transparent 0.8px
+      );
+    background-size: 33.3% 33.33%;
+    background-position: 0 8px, 6px 0;
+  }
 }
 
 .skill-card {
   cursor: pointer;
   position: relative;
-
   transition: all 0.3s;
-}
-.skill-card:after,
-.skill-card:before {
-  content: " ";
-  width: 2.5rem;
-  height: 2.5rem;
-  position: absolute;
-  border: 0px solid #fff;
-  transition: all 1s;
-}
-.skill-card:after {
-  top: -1px;
-  left: -1px;
-  border-top: 2px solid #fff;
-  border-left: 2px solid #fff;
-}
-.skill-card:before {
-  top: -1px;
-  right: -1px;
-  border-right: 2px solid #fff;
-  border-top: 2px solid #fff;
-}
-.skill-card:hover {
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-.skill-card:hover:before,
-.skill-card:hover:after {
-  width: 100%;
-  height: 100%;
+
+  &:after,
+  &:before {
+    content: " ";
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    border: 0px solid white;
+    transition: all 1s;
+  }
+
+  &::after {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+  }
+  &::before {
+    top: -1px;
+    right: -1px;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+  }
+
+  &:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    &:before,
+    &:after {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
-/* @Project Snaphots */
-
+/* @Project Snapshots */
 .image-container:after,
 .image-container:before,
 .img-border-r,
@@ -386,37 +292,37 @@ p {
   width: 4.5rem;
   height: 4.5rem;
   position: absolute;
-  border: 0px solid #fff;
+  border: 0px solid white;
   transition: all 1s;
 }
 .image-container:after {
   top: -1.5rem;
   left: -1.5rem;
-  border-top: 4px solid #4affa4;
-  border-left: 4px solid #4affa4;
+  border-top: 4px solid var(--color-primary);
+  border-left: 4px solid var(--color-primary);
 }
 .image-container:before {
   top: -1.5rem;
   right: -1.5rem;
-  border-right: 4px solid #ffa10b;
-  border-top: 4px solid #ffa10b;
+  border-right: 4px solid var(--color-secondary);
+  border-top: 4px solid var(--color-secondary);
 }
 
 .img-border-r {
   bottom: -1.5rem;
   left: -1.5rem;
-  border-left: 4px solid #4affa4;
-  border-bottom: 4px solid #4affa4;
+  border-left: 4px solid var(--color-primary);
+  border-bottom: 4px solid var(--color-primary);
 }
 .img-border-l {
   bottom: -1.5rem;
   right: -1.5rem;
-  border-right: 4px solid #4affa4;
-  border-bottom: 4px solid #4affa4;
+  border-right: 4px solid var(--color-primary);
+  border-bottom: 4px solid var(--color-primary);
 }
 
 .custom-dashed-border {
-  border: 1px solid #fff;
+  border: 1px solid white;
 }
 
 @layer utilities {
