@@ -56,7 +56,7 @@ const BlockPatternContainer: React.FC = () => {
     };
 
     let width = 0;
-    let height = 12;
+    const height = 12;
 
     switch (size) {
       case "xs":

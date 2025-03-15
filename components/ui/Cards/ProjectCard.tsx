@@ -15,7 +15,7 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
 }) => {
   return (
     <div className="grid lg:grid-cols-[45%,50%] gap-[5rem] py-10 items-center gap-y-8">
-      <Image src={"/img/card.svg"} alt="card" width={653} height={338} />
+      <Image src="/img/card.svg" alt="card" width={653} height={338} />
       <div>
         <h2 className="uppercase text-2xl mb-3 tracking-[0.25rem] font-semibold">
           {name}

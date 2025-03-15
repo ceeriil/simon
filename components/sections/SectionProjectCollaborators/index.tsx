@@ -1,6 +1,7 @@
 import React from "react";
+
 import { Profile } from "@/components/assets/Profile";
-import { IProject } from "@/data/projects";
+import type { IProject } from "@/data/projects";
 
 interface ISectionProjectCollaboratorsProps {
   project: IProject;
@@ -10,7 +11,7 @@ export const SectionProjectCollaborators: React.FC<
   ISectionProjectCollaboratorsProps
 > = ({ project }) => {
   if (!project.collaborators || project.collaborators.length <= 0) {
-    return <></>;
+    return null;
   }
 
   return (
@@ -23,7 +24,7 @@ export const SectionProjectCollaborators: React.FC<
 
       <div className="py-8 border-l border-r border-[#ffffff90] container mx-auto pb-20">
         <div className=" grid mx-auto gap-2 lg:grid-cols-3 px-2 lg:px-0">
-          {project.collaborators.map((collaborator) => (
+          {project.collaborators.map(collaborator => (
             <div
               className="border-[#727171]  border  text-white py-4 px-3 bg-[#1A1A1A] text-left flex space-x-5 items-center lg:justify-center cursor-pointer"
               key={collaborator.name}

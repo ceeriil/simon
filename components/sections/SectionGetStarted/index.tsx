@@ -1,8 +1,10 @@
 "use client";
+
+import React, { useState } from "react";
+
 import { SectionBg } from "@/components/assets/SectionBg";
 import { SmilingFace } from "@/components/assets/SmilingFace";
 import { Contact } from "@/components/Contact";
-import React, { useState } from "react";
 
 export const SectionGetStarted = () => {
   const [contactOpen, setContactOpen] = useState(false);
@@ -17,6 +19,7 @@ export const SectionGetStarted = () => {
           </h2>
           <button
             className="border-primary text-primary py-3 px-6 border-2 mt-12 uppercase text-sm inline-block tracking-[0.3rem] cursor-pointer "
+            type="button"
             onClick={() => setContactOpen(true)}
           >
             <span className="">Yes, Let’s Get Started</span>

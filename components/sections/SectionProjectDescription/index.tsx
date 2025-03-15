@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
+
 import { ArrowLink } from "@/components/assets/ArrowLink";
-import { IProject } from "@/data/projects";
+import type { IProject } from "@/data/projects";
 import { Tag } from "@/components/Tag/Tag";
 
 interface ISectionProjectDescriptionProps {

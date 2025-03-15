@@ -2,9 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import { IProject } from "@/data/projects";
 import Link from "next/link";
 import { useTransitionRouter } from "next-transition-router";
+
+import type { IProject } from "@/data/projects";
 
 interface ISectionProjectHeaderProps {
   projects: IProject;
@@ -17,11 +18,11 @@ export const SectionProjectHeader: React.FC<ISectionProjectHeaderProps> = ({
 
   return (
     <>
-      <div className="py-7 border-b border-[#ffffff90]"></div>
+      <div className="py-7 border-b border-[#ffffff90]" />
       <section>
         <div className="lg:h-[20rem] h-[18rem] relative container mx-auto border border-[#ffffff90] border-t-0 border-b-0 ">
           <Image
-            src={"/img/project.svg"}
+            src="/img/project.svg"
             alt="Project Image"
             layout="fill"
             className="object-cover"
@@ -30,6 +31,7 @@ export const SectionProjectHeader: React.FC<ISectionProjectHeaderProps> = ({
             <button
               className="bg-white text-black py-1 text-lg uppercase px-6 font-semibold"
               onClick={() => router.back()}
+              type="button"
             >
               Back
             </button>

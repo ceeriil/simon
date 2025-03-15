@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactLenis } from "@studio-freight/react-lenis";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type props = {
   children: ReactNode;
@@ -10,7 +10,7 @@ type props = {
 function SmoothScrolling({ children }: props) {
   return (
     <ReactLenis
-      class={"menu"}
+      class="menu"
       root
       options={{ lerp: 0.1, duration: 2, smoothTouch: false }}
     >

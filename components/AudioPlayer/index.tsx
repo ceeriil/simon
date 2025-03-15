@@ -6,6 +6,7 @@ import { FaPause, FaPlay } from "react-icons/fa6";
 import { MdSkipNext, MdSkipPrevious } from "react-icons/md";
 
 import styles from "./AudioPlayer.module.scss";
+
 const {
   Wrapper,
   Content,
@@ -32,21 +33,21 @@ const AudioPlayer = ({ songs }: { songs: Isongs[] }) => {
   const currentSong = songs[currentSongIndex];
 
   const handlePrevious = () => {
-    setCurrentSongIndex((prevIndex) => {
+    setCurrentSongIndex(prevIndex => {
       const newIndex = prevIndex === 0 ? songs.length - 1 : prevIndex - 1;
       return newIndex;
     });
   };
 
   const handleNext = () => {
-    setCurrentSongIndex((prevIndex) => {
+    setCurrentSongIndex(prevIndex => {
       const newIndex = (prevIndex + 1) % songs.length;
       return newIndex;
     });
   };
 
   const handlePlayPause = () => {
-    setIsPlaying((prevState) => !prevState);
+    setIsPlaying(prevState => !prevState);
   };
 
   const handleSongEnd = () => {
@@ -82,7 +83,7 @@ const AudioPlayer = ({ songs }: { songs: Isongs[] }) => {
   }, [currentSong.url]);
 
   return (
-    <div className={AudioContainer} draggable={true}>
+    <div className={AudioContainer} draggable>
       <div className={`${Wrapper} ${expandDisk ? "" : Minimize} `}>
         <div className={Content}>
           <div className={TextContainer}>
@@ -95,16 +96,23 @@ const AudioPlayer = ({ songs }: { songs: Isongs[] }) => {
             src={currentSong.url}
             onEnded={handleSongEnd}
             autoPlay={isPlaying}
-          ></audio>
+          >
+            <track
+              kind="captions"
+              src=""
+              label="No captions available"
+              default
+            />
+          </audio>
 
           <div className={FlexContainer}>
-            <button onClick={handlePrevious}>
+            <button onClick={handlePrevious} type="button">
               <MdSkipPrevious size={32} />
             </button>
-            <button onClick={handlePlayPause}>
+            <button onClick={handlePlayPause} type="button">
               {isPlaying ? <FaPause size={34} /> : <FaPlay size={34} />}
             </button>
-            <button onClick={handleNext}>
+            <button onClick={handleNext} type="button">
               <MdSkipNext size={32} />
             </button>
           </div>

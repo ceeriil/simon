@@ -16,7 +16,7 @@ export const CSSIcon = ({ className }: { className?: string }) => {
         x2="95.0811"
         y2="290.531"
         stroke="#41ABFF"
-        stroke-width="2.23834"
+        strokeWidth="2.23834"
       />
       <line
         x1="204.381"
@@ -24,7 +24,7 @@ export const CSSIcon = ({ className }: { className?: string }) => {
         x2="204.381"
         y2="290.531"
         stroke="#41ABFF"
-        stroke-width="2.23834"
+        strokeWidth="2.23834"
       />
       <line
         x1="289.676"
@@ -32,7 +32,7 @@ export const CSSIcon = ({ className }: { className?: string }) => {
         x2="7.54767"
         y2="98.8484"
         stroke="#41ABFF"
-        stroke-width="2.23834"
+        strokeWidth="2.23834"
       />
       <line
         x1="289.676"
@@ -40,7 +40,7 @@ export const CSSIcon = ({ className }: { className?: string }) => {
         x2="7.54767"
         y2="208.148"
         stroke="#41ABFF"
-        stroke-width="2.23834"
+        strokeWidth="2.23834"
       />
       <g filter="url(#filter0_dii_35_1572)">
         <path
@@ -50,10 +50,10 @@ export const CSSIcon = ({ className }: { className?: string }) => {
         <path
           d="M210.872 232.17C206.627 239.522 198.783 244.051 190.294 244.051L109.708 244.051C101.219 244.051 93.3745 239.522 89.13 232.17L48.8368 162.38C44.5923 155.029 44.5923 145.971 48.8368 138.619L89.1299 68.8293C93.3745 61.4776 101.219 56.9487 109.708 56.9487L190.294 56.9487C198.783 56.9487 206.627 61.4776 210.872 68.8293L251.165 138.619C255.41 145.971 255.41 155.029 251.165 162.38L210.872 232.17Z"
           stroke="url(#paint0_linear_35_1572)"
-          stroke-width="3.09027"
+          strokeWidth="3.09027"
         />
       </g>
-      <g clip-path="url(#clip0_35_1572)">
+      <g clipPath="url(#clip0_35_1572)">
         <g filter="url(#filter1_i_35_1572)">
           <path
             d="M105.84 101.34C105.84 102.013 107.544 121.739 109.651 145.187C111.713 168.59 113.506 188.451 113.551 189.303L113.686 190.827L131.843 195.849L149.956 200.87L153.587 199.884C155.56 199.346 163.675 197.104 171.655 194.907C184.029 191.5 186.136 190.782 186.315 190.02C186.539 188.944 194.161 102.551 194.161 101.116V100.13H105.84V101.34ZM177.887 120.394C177.707 121.47 176.542 134.203 175.286 148.774C173.986 163.3 172.91 175.315 172.821 175.405C172.641 175.629 150.628 181.726 150 181.726C149.552 181.726 137.537 178.453 129.332 176.122L127.046 175.45L126.508 169.532C126.239 166.259 125.88 162.313 125.701 160.744L125.432 157.965H131.036C137.358 157.965 137.178 157.875 137.223 161.775C137.223 162.762 137.358 164.286 137.492 165.183L137.761 166.797L143.903 168.411L150 170.025L156.053 168.411C159.371 167.514 162.15 166.752 162.15 166.752C162.195 166.707 162.464 164.062 162.733 160.879C163.002 157.651 163.316 154.512 163.45 153.795L163.675 152.585H125.208L124.984 151.553C124.849 151.015 124.58 148.415 124.401 145.725L124.087 140.928H164.482L164.751 137.879C164.93 136.221 165.199 133.665 165.333 132.23C165.513 130.392 165.468 129.675 165.109 129.899C164.84 130.034 155.291 130.034 143.813 129.854L122.966 129.585L122.697 126.402C122.518 124.654 122.294 122.143 122.159 120.843L121.89 118.511H178.111L177.887 120.394Z"
@@ -73,9 +73,9 @@ export const CSSIcon = ({ className }: { className?: string }) => {
           width="283.46"
           height="261.867"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -144,9 +144,9 @@ export const CSSIcon = ({ className }: { className?: string }) => {
           width="88.3213"
           height="104.74"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -180,8 +180,8 @@ export const CSSIcon = ({ className }: { className?: string }) => {
           y2="245.596"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#BEE2FF" />
-          <stop offset="1" stop-color="#4AFFA4" stop-opacity="0" />
+          <stop stopColor="#BEE2FF" />
+          <stop offset="1" stopColor="#4AFFA4" stopOpacity="0" />
         </linearGradient>
         <clipPath id="clip0_35_1572">
           <rect

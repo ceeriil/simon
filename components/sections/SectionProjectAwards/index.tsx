@@ -1,5 +1,6 @@
 import React from "react";
-import { IProject } from "@/data/projects";
+
+import type { IProject } from "@/data/projects";
 
 interface ISectionProjectAwardsProps {
   projects: IProject;
@@ -9,7 +10,7 @@ export const SectionProjectAwards: React.FC<ISectionProjectAwardsProps> = ({
   projects,
 }) => {
   if (!projects.awards || projects.awards.length <= 0) {
-    return <></>;
+    return null;
   }
 
   return (
@@ -22,7 +23,7 @@ export const SectionProjectAwards: React.FC<ISectionProjectAwardsProps> = ({
 
       <div className="py-8 border-l border-r border-[#ffffff90] container mx-auto lg:pb-32 pb-20">
         <div className=" grid mx-auto gap-2">
-          {projects.awards.map((award) => (
+          {projects.awards.map(award => (
             <div
               className="border-[#727171] border-l-0 border-r-0 border uppercase tracking-[0.35rem] text-xl text-white py-5 px-3 bg-[#1A1A1A] text-center"
               key={award.name}

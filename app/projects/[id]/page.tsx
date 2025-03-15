@@ -1,4 +1,5 @@
 "use client";
+
 import {
   SectionPrevNextNavigation,
   SectionProjectAwards,
@@ -17,7 +18,7 @@ type ProjectParams = {
 };
 
 export default function ProjectDetails({ params }: ProjectParams) {
-  const project = projects.find((p) => p.slug === params.id);
+  const project = projects.find(p => p.slug === params.id);
 
   if (!project) {
     return <div>loading</div>;

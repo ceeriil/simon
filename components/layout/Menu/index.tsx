@@ -1,7 +1,9 @@
 "use client";
+
 import React, { useEffect, useCallback } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+
 import { HomeIcon } from "@/components/assets/HomeIcon";
 import { InfoIcon } from "@/components/assets/InfoIcon";
 import { BriefCaseIcon } from "@/components/assets/BriefCaseIcon";
@@ -63,6 +65,7 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
               <span className="text-2xl lg:hidden">MENU</span>
               <button
                 onClick={onClose}
+                type="button"
                 className="flex uppercase space-x-3 lg:space-x-0 items-center lg:absolute left-0 top-8 lg:translate-x-[-50%]"
               >
                 <span className="text-lg lg:hidden">cancel</span>
@@ -95,7 +98,10 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ delay: 0.6, duration: 0.4 }}
               >
-                <button className="border-primary text-primary py-2.5 px-6 border-2 mt-4 uppercase text-sm tracking-[0.25rem]">
+                <button
+                  className="border-primary text-primary py-2.5 px-6 border-2 mt-4 uppercase text-sm tracking-[0.25rem]"
+                  type="button"
+                >
                   Get In Touch
                 </button>
                 <div className="mt-8 text-lg font-medium lg:hidden">

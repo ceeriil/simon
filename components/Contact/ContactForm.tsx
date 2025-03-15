@@ -46,7 +46,7 @@ export const ContactForm: React.FC = () => {
           onChange={handleChange}
           required
           className="w-full p-2 border-2 border-[#3D3D3D]  focus:outline-none focus:ring-2 focus:ring-primary bg-transparent h-48 resize-none"
-        ></textarea>
+        />
       </div>
       <button
         type="submit"

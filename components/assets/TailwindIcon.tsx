@@ -16,7 +16,7 @@ export const TailwindIcon = ({ className }: { className?: string }) => {
         x2="95.0811"
         y2="290.531"
         stroke="#06B6D4"
-        stroke-width="2.23834"
+        strokeWidth="2.23834"
       />
       <line
         x1="204.381"
@@ -24,7 +24,7 @@ export const TailwindIcon = ({ className }: { className?: string }) => {
         x2="204.381"
         y2="290.531"
         stroke="#06B6D4"
-        stroke-width="2.23834"
+        strokeWidth="2.23834"
       />
       <line
         x1="289.676"
@@ -32,7 +32,7 @@ export const TailwindIcon = ({ className }: { className?: string }) => {
         x2="7.54767"
         y2="98.8486"
         stroke="#06B6D4"
-        stroke-width="2.23834"
+        strokeWidth="2.23834"
       />
       <line
         x1="289.676"
@@ -40,7 +40,7 @@ export const TailwindIcon = ({ className }: { className?: string }) => {
         x2="7.54767"
         y2="208.148"
         stroke="#06B6D4"
-        stroke-width="2.23834"
+        strokeWidth="2.23834"
       />
       <g filter="url(#filter0_dii_35_1788)">
         <path
@@ -50,10 +50,10 @@ export const TailwindIcon = ({ className }: { className?: string }) => {
         <path
           d="M210.872 232.17C206.627 239.522 198.783 244.051 190.294 244.051L109.708 244.051C101.219 244.051 93.3745 239.522 89.13 232.17L48.8368 162.381C44.5923 155.029 44.5923 145.971 48.8368 138.619L89.1299 68.8296C93.3745 61.4778 101.219 56.9489 109.708 56.9489L190.294 56.9489C198.783 56.949 206.627 61.4778 210.872 68.8296L251.165 138.619C255.41 145.971 255.41 155.029 251.165 162.381L210.872 232.17Z"
           stroke="url(#paint0_linear_35_1788)"
-          stroke-width="3.09027"
+          strokeWidth="3.09027"
         />
       </g>
-      <g clip-path="url(#clip0_35_1788)">
+      <g clipPath="url(#clip0_35_1788)">
         <g filter="url(#filter1_i_35_1788)">
           <path
             d="M150.371 114.226C134.377 114.226 124.381 122.221 120.382 138.209C126.38 130.214 133.378 127.217 141.374 129.215C145.937 130.355 149.198 133.666 152.808 137.329C158.688 143.295 165.493 150.201 180.36 150.201C196.352 150.201 206.35 142.206 210.347 126.217C204.35 134.212 197.353 137.21 189.355 135.212C184.794 134.072 181.533 130.762 177.922 127.099C172.042 121.132 165.235 114.226 150.371 114.226ZM120.382 150.201C104.389 150.201 94.3919 158.196 90.3945 174.186C96.3914 166.191 103.389 163.193 111.387 165.192C115.948 166.333 119.209 169.642 122.819 173.304C128.699 179.271 135.506 186.178 150.371 186.178C166.365 186.178 176.361 178.183 180.36 162.194C174.361 170.188 167.364 173.187 159.368 171.187C154.805 170.049 151.544 166.737 147.933 163.076C142.053 157.109 135.248 150.201 120.382 150.201Z"
@@ -73,9 +73,9 @@ export const TailwindIcon = ({ className }: { className?: string }) => {
           width="283.46"
           height="261.867"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -144,9 +144,9 @@ export const TailwindIcon = ({ className }: { className?: string }) => {
           width="119.952"
           height="75.9521"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -180,8 +180,8 @@ export const TailwindIcon = ({ className }: { className?: string }) => {
           y2="245.596"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#64FFF6" />
-          <stop offset="1" stop-color="#07FFF1" stop-opacity="0" />
+          <stop stopColor="#64FFF6" />
+          <stop offset="1" stopColor="#07FFF1" stopOpacity="0" />
         </linearGradient>
         <clipPath id="clip0_35_1788">
           <rect

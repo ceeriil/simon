@@ -16,7 +16,7 @@ export const TypescriptIcon = ({ className }: { className?: string }) => {
         x2="95.0811"
         y2="290.531"
         stroke="#1C8BD6"
-        stroke-width="2.23834"
+        strokeWidth="2.23834"
       />
       <line
         x1="204.381"
@@ -24,7 +24,7 @@ export const TypescriptIcon = ({ className }: { className?: string }) => {
         x2="204.381"
         y2="290.531"
         stroke="#1C8BD6"
-        stroke-width="2.23834"
+        strokeWidth="2.23834"
       />
       <line
         x1="289.676"
@@ -32,7 +32,7 @@ export const TypescriptIcon = ({ className }: { className?: string }) => {
         x2="7.54767"
         y2="98.8486"
         stroke="#1C8BD6"
-        stroke-width="2.23834"
+        strokeWidth="2.23834"
       />
       <line
         x1="289.676"
@@ -40,7 +40,7 @@ export const TypescriptIcon = ({ className }: { className?: string }) => {
         x2="7.54767"
         y2="208.148"
         stroke="#1C8BD6"
-        stroke-width="2.23834"
+        strokeWidth="2.23834"
       />
       <g filter="url(#filter0_dii_35_2216)">
         <path
@@ -50,13 +50,13 @@ export const TypescriptIcon = ({ className }: { className?: string }) => {
         <path
           d="M210.872 232.17C206.627 239.522 198.783 244.051 190.294 244.051L109.708 244.051C101.219 244.051 93.3745 239.522 89.13 232.17L48.8368 162.381C44.5923 155.029 44.5923 145.971 48.8368 138.619L89.1299 68.8296C93.3745 61.4778 101.219 56.9489 109.708 56.9489L190.294 56.9489C198.783 56.949 206.627 61.4778 210.872 68.8296L251.165 138.619C255.41 145.971 255.41 155.029 251.165 162.381L210.872 232.17Z"
           stroke="url(#paint0_linear_35_2216)"
-          stroke-width="3.09027"
+          strokeWidth="3.09027"
         />
       </g>
       <g filter="url(#filter1_i_35_2216)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M99.6504 99.6499V150V200.35H200.35V99.6499H99.6504ZM121.729 154.28V150.176L121.804 150.201V146.073L139.427 145.997C149.119 145.997 157.099 146.022 157.099 146.098C157.2 146.148 157.2 147.986 157.2 150.252V154.28H144.109V191.539H134.82V154.28H121.729ZM186.856 149.572C185.094 147.734 183.13 146.576 180.562 145.972L180.613 145.922C178.876 145.468 174.722 145.317 172.96 145.67C167.522 146.677 163.72 150.201 162.638 155.236C162.285 156.671 162.411 160.246 162.789 161.706C163.292 163.393 164.375 165.432 165.558 166.741C167.623 168.906 169.838 170.316 175.049 172.532C179.581 174.546 181.192 175.452 181.997 176.56C182.576 177.441 182.753 177.969 182.753 179.127C182.753 180.386 182.35 181.292 181.418 182.148C179.253 184.112 174.873 184.339 171.6 182.652C170.518 182.048 168.655 180.285 167.824 178.976L167.169 178.095L164.325 179.757L160.548 181.947L159.592 182.551C159.491 182.727 161.278 185.421 162.21 186.428C164.576 189.021 168.428 191.035 172.456 191.79C174.344 192.118 178.372 192.168 180.135 191.866C185.749 190.934 189.676 188.09 191.287 183.885C192.722 180.034 192.244 174.898 190.104 171.625C188.216 168.705 185.094 166.666 177.894 163.569C173.992 161.857 172.733 161.027 172.053 159.642C171.751 158.987 171.6 158.534 171.6 157.729C171.6 155.085 173.614 153.499 176.635 153.701C178.725 153.852 180.059 154.657 181.368 156.52C181.771 157.175 182.174 157.603 182.274 157.527C184.918 155.891 189.273 152.945 189.273 152.794C189.172 152.341 187.788 150.579 186.856 149.572Z"
           fill="#1E4C6B"
         />
@@ -69,9 +69,9 @@ export const TypescriptIcon = ({ className }: { className?: string }) => {
           width="283.46"
           height="261.867"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -140,9 +140,9 @@ export const TypescriptIcon = ({ className }: { className?: string }) => {
           width="100.7"
           height="104.7"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -176,8 +176,8 @@ export const TypescriptIcon = ({ className }: { className?: string }) => {
           y2="245.596"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CFECFF" />
-          <stop offset="1" stop-color="#1283D1" stop-opacity="0" />
+          <stop stopColor="#CFECFF" />
+          <stop offset="1" stopColor="#1283D1" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

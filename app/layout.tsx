@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Jura } from "next/font/google";
+
 import "../styles/globals.scss";
-import SmoothScrolling from "@/components/utils/smooth-scrolling/smooth-scrolling";
-import { Providers } from "./providers";
+
 import AudioPlayer from "@/components/AudioPlayer";
+
+import { Providers } from "./providers";
 
 const jura = Jura({
   subsets: ["latin"],
@@ -31,15 +33,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/*       <SmoothScrolling>
-       */}{" "}
       <body className={jura.className}>
         <Providers>
           {children}
           <AudioPlayer songs={songs} />
         </Providers>
       </body>
-      {/*   </SmoothScrolling> */}
     </html>
   );
 }

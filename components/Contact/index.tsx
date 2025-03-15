@@ -2,8 +2,10 @@
 
 import React, { useCallback, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ContactForm } from "./ContactForm";
+
 import { CancelIcon } from "../assets/CancelIcon";
+
+import { ContactForm } from "./ContactForm";
 
 interface IContactProps {
   isOpen: boolean;
@@ -82,6 +84,7 @@ export const Contact: React.FC<IContactProps> = ({ isOpen, onClose }) => {
                   </span>
                   <button
                     onClick={onClose}
+                    type="button"
                     className="flex uppercase space-x-3 items-center"
                   >
                     <span className="text-lg">cancel</span>

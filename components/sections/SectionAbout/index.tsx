@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+
 import BlockPatternContainer from "./BlockPatternContainer";
 
 export const SectionAbout = () => {

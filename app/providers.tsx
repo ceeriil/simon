@@ -10,7 +10,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   return (
     <TransitionRouter
-      auto={true}
+      auto
       leave={(next, from, to) => {
         console.log({ from, to });
 
@@ -32,7 +32,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           tl.kill();
         };
       }}
-      enter={(next) => {
+      enter={next => {
         const tl = gsap
           .timeline()
 
