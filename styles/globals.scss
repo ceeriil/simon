@@ -2,18 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ----------- Import Fonts ------------ */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+/* ----------- CSS Variables ------------ */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --ui-notch-amount: 0.2rem;
+  --ui-notch-hypotenuse: 12.627416px;
+  --ui-notch-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--ui-notch-amount) + 2px)
+  );
+  --color-primary: #4affa4;
+  --color-secondary: #ffa10b;
+  --color-dark-translucent: rgba(40, 40, 40, 0.5);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,6 +36,13 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+p {
+  font-family: "Chakra Petch", serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* @component: splash */
 .splash {
   background-image: url("/img/bg-temp.svg"),
     linear-gradient(90deg, #ffffff10 1px, transparent 1px),
@@ -33,6 +50,279 @@ body {
   background-repeat: no-repeat, repeat, repeat;
   background-size: cover, 4% 100%;
   background-position: center, 0%, 0%;
+}
+
+/* @component: SectionHero */
+.hero-box {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 12px,
+    #146f4220 12px,
+    #146f4220 14.5px
+  );
+  position: relative;
+
+  &:after,
+  &:before,
+  .hero-box-border,
+  .hero-box-border-2 {
+    content: " ";
+    width: 2.5rem;
+    height: 1.5rem;
+    position: absolute;
+    border: 0px solid white;
+    transition: all 1s;
+  }
+
+  &:after {
+    top: -1px;
+    left: -1px;
+    border-top: 4px solid var(--color-primary);
+    border-left: 4px solid var(--color-primary);
+  }
+
+  &:before {
+    top: -1px;
+    right: -1px;
+    border-right: 4px solid var(--color-primary);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .hero-box-border {
+    bottom: -1px;
+    left: -1px;
+    border-left: 4px solid var(--color-primary);
+    border-bottom: 4px solid var(--color-primary);
+  }
+
+  .hero-box-border-2 {
+    bottom: -1px;
+    right: -1px;
+    border-right: 4px solid var(--color-secondary);
+    border-bottom: 4px solid var(--color-secondary);
+  }
+}
+
+/* @component: Menu */
+.menu-inner {
+  * {
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: inherit;
+    left: 0;
+    height: 45%;
+    z-index: 0;
+    top: 3rem;
+    border-left: 3px solid var(--color-primary);
+  }
+
+  .cut-box {
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      background-color: inherit;
+      left: 0;
+      height: 90%;
+      z-index: 99;
+      top: 0;
+      border-left: 3px solid var(--color-secondary);
+    }
+  }
+}
+
+/* @component: SectionAbout */
+.grid-background-alt {
+  background-color: #121212;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &.loader {
+    position: fixed;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 1rem);
+  }
+
+  &::before {
+    top: -1rem;
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dark-translucent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to right,
+        var(--color-dark-translucent) 1px,
+        transparent 1px
+      );
+    background-size: 16.66% 33.33%;
+  }
+
+  &::after {
+    top: -1rem;
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dark-translucent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to right,
+        var(--color-dark-translucent) 1px,
+        transparent 1px
+      );
+    background-size: 16.66% 33.33%;
+    background-position: 0 6px, 6px 0;
+  }
+}
+
+/*  @component: ToolBox */
+.grid-background {
+  background-color: #121212;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100%);
+  }
+
+  &::before {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dark-translucent) 0.8px,
+        transparent 0.8px
+      ),
+      linear-gradient(
+        to right,
+        var(--color-dark-translucent) 0.8px,
+        transparent 0.8px
+      );
+    background-size: 33.3% 33.33%;
+  }
+
+  &::after {
+    top: -1rem;
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dark-translucent) 0.8px,
+        transparent 0.8px
+      ),
+      linear-gradient(
+        to right,
+        var(--color-dark-translucent) 0.8px,
+        transparent 0.8px
+      );
+    background-size: 33.3% 33.33%;
+    background-position: 0 8px, 6px 0;
+  }
+}
+
+.skill-card {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+
+  &:after,
+  &:before {
+    content: " ";
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    border: 0px solid white;
+    transition: all 1s;
+  }
+
+  &::after {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+  }
+  &::before {
+    top: -1px;
+    right: -1px;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+  }
+
+  &:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    &:before,
+    &:after {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/* @Project Snapshots */
+.image-container:after,
+.image-container:before,
+.img-border-r,
+.img-border-l {
+  content: " ";
+  width: 4.5rem;
+  height: 4.5rem;
+  position: absolute;
+  border: 0px solid white;
+  transition: all 1s;
+}
+.image-container:after {
+  top: -1.5rem;
+  left: -1.5rem;
+  border-top: 4px solid var(--color-primary);
+  border-left: 4px solid var(--color-primary);
+}
+.image-container:before {
+  top: -1.5rem;
+  right: -1.5rem;
+  border-right: 4px solid var(--color-secondary);
+  border-top: 4px solid var(--color-secondary);
+}
+
+.img-border-r {
+  bottom: -1.5rem;
+  left: -1.5rem;
+  border-left: 4px solid var(--color-primary);
+  border-bottom: 4px solid var(--color-primary);
+}
+.img-border-l {
+  bottom: -1.5rem;
+  right: -1.5rem;
+  border-right: 4px solid var(--color-primary);
+  border-bottom: 4px solid var(--color-primary);
+}
+
+.custom-dashed-border {
+  border: 1px solid white;
 }
 
 @layer utilities {

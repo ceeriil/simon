@@ -1,0 +1,111 @@
+.AudioContainer {
+  position: fixed;
+  bottom: 3rem;
+  left: 7rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+}
+.Wrapper {
+  display: flex;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  background: linear-gradient(to right, #1d1d1d, #454545);
+  border: 1px solid #fff;
+  padding: 1.8rem 2rem;
+  transform-origin: left;
+  transition: 0.8s ease-in;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  padding-left: 4rem;
+}
+
+.Wrapper.Minimize {
+  transform: scaleX(0);
+}
+
+.Wrapper .Content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.Wrapper .Content .TextContainer h2 {
+  font-weight: 700;
+  font-size: 0.95rem;
+  width: 9rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+.Wrapper .Content .TextContainer h3 {
+  font-weight: 400;
+  font-size: 0.6rem;
+  margin-top: 0.1rem;
+  white-space: nowrap;
+  color: #ffffff;
+  opacity: 70%;
+  width: 6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Wrapper .Content .FlexContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Wrapper .Content .FlexContainer button {
+  background: none;
+}
+
+.RecordPlayer {
+  position: absolute;
+  top: 50%;
+  left: -4.2rem;
+  transform: translateY(-50%);
+}
+
+.RecordPlayer:first-of-type {
+  transition: 0.8s ease-in;
+  transform: translateY(-50%) scaleX(1);
+  transform-origin: left;
+}
+
+.RecordPlayer.Minimize {
+  transform: translateY(-50%) scaleX(0);
+}
+
+.RecordPlayer:last-of-type {
+  animation: rotate 2s linear infinite paused;
+  transform-origin: center center;
+}
+
+.RecordPlayer:last-of-type.Rotate {
+  animation-play-state: running;
+}
+.Wrapper .Logo {
+  position: absolute;
+  top: -1.6rem;
+  right: 0;
+}
+
+@media (max-width: 568px) {
+  .Wrapper {
+    display: none;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}

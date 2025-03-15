@@ -1,6 +1,21 @@
-import Image from "next/image";
-import { SplashScreen } from "@/components/layout/splash-screen/splash-screen";
+import {
+  Header,
+  SectionAbout,
+  SectionTools,
+  SectionGetStarted,
+  SectionHero,
+  SectionRecent,
+} from "@/components";
 
 export default function Home() {
-  return <SplashScreen />;
+  return (
+    <>
+      <Header />
+      <SectionHero />
+      <SectionAbout />
+      <SectionRecent />
+      <SectionTools />
+      <SectionGetStarted />
+    </>
+  );
 }
