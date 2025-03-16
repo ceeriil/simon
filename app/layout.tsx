@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const songs = [
   {
     title: "Can you feel my heart",
-    artist: "Yung Kage, Yumi, Softwilly, Larry Crotch",
+    artist: "Bring Me the Horizon",
     url: "/audio/guitars.mp3",
   },
 ];
