@@ -31,7 +31,7 @@ export const SectionProjectCollaborators: React.FC<
             >
               <Profile />
               <div>
-                <span className="text-lg tracking-[0.25rem]  uppercase font-semibold ">
+                <span className="text-lg tracking-[0.25rem]  uppercase font-semibold jura-font ">
                   {collaborator.name}
                 </span>
                 <p className="text-sm text-gray-300">{collaborator.role}</p>

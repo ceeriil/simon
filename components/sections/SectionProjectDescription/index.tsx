@@ -22,7 +22,7 @@ export const SectionProjectDescription: React.FC<
       </div>
       <p className="py-2 text-lg lg:pr-8">{projects.description}</p>
       <Link
-        href="/"
+        href={projects.liveLink || "/"}
         className="inline-flex text-primary mt-12 lg:text-xl uppercase lg:tracking-[0.35rem] tracking-[0.25rem] space-x-5 text-lg font-semibold"
       >
         <ArrowLink />

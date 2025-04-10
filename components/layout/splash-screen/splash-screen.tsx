@@ -1,15 +1,48 @@
-import React from "react";
+"use client";
+
+import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
 
 export const SplashScreen = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (sessionStorage.getItem("soundConsent") === "true" || pathname !== "/") {
+      setIsVisible(false);
+    }
+  }, [pathname]);
+
+  const handleClick = () => {
+    sessionStorage.setItem("soundConsent", "true");
+
+    const audio = new Audio("/audio/glitch.mp3");
+    audio.play();
+
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center md:p-24 splash p-4">
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-[#5FFFAF1F] before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#5FFFAF1F] after:dark:opacity-40 before:lg:h-[360px] z-[-1] flex-col text-center">
-        <div className="text-6xl uppercase mb-5 ">
+    <main className="flex min-h-screen flex-col items-center justify-center md:p-24 splash p-4 fixed w-full inset-0 bg-black z-[999999] text-center">
+      <div className="relative flex flex-col items-center text-center">
+        <h2 className="text-5xl uppercase mb-5 font-medium tracking-wider">
           Cee<span className="text-primary">riil</span>
-        </div>
-        <p className="uppercase md:text-xl tracking-[0.5rem] text-[0.9rem] leading-[1.7]">
+        </h2>
+        <h3 className="uppercase md:text-xl tracking-[0.5rem] text-[0.9rem] leading-[1.7]">
           Web 3 Frontend developer
+        </h3>
+        <p className="mt-4">
+          This website uses sound for an immersive experience.
         </p>
+        <button
+          type="button"
+          onClick={handleClick}
+          className="border-primary text-primary py-2.5 px-7 border-2 mt-4 uppercase text-sm cursor-pointer jura-font tracking-widest"
+        >
+          Proceed
+        </button>
       </div>
     </main>
   );

@@ -79,9 +79,9 @@ export const Contact: React.FC<IContactProps> = ({ isOpen, onClose }) => {
             <div className="lg:w-[70%] h-[70%] bg-[#171717] p-6 lg:px-12 px-6 pb-12 relative overflow-hidden contact-inner mx-[1rem]">
               <div className="z-[10] relative">
                 <div className="py-6 flex justify-between items-center">
-                  <span className="text-2xl uppercase font-semibold">
+                  <h2 className="text-2xl uppercase font-semibold">
                     Let’s get started
-                  </span>
+                  </h2>
                   <button
                     onClick={onClose}
                     type="button"

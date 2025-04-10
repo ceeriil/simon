@@ -28,7 +28,7 @@ export const SectionProjectAwards: React.FC<ISectionProjectAwardsProps> = ({
               className="border-[#727171] border-l-0 border-r-0 border uppercase tracking-[0.35rem] text-xl text-white py-5 px-3 bg-[#1A1A1A] text-center"
               key={award.name}
             >
-              {award.name}
+              <h3> {award.name}</h3>
             </div>
           ))}
         </div>

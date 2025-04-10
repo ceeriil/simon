@@ -29,15 +29,15 @@ export const SectionProjectHeader: React.FC<ISectionProjectHeaderProps> = ({
           />
           <div className="absolute  z-10 py-4 top-0 px-5 flex justify-between items-center w-full ">
             <button
-              className="bg-white text-black py-1 text-lg uppercase px-6 font-semibold"
-              onClick={() => router.back()}
+              className="bg-white text-black py-1 text-lg uppercase px-6 font-semibold jura-font"
+              onClick={() => router.push("/")}
               type="button"
             >
               Back
             </button>
             <Link
               href={projects.githubLink}
-              className="bg-[#ffffff25]  text-white py-1 text-lg uppercase px-6 font-semibold border-white border hidden"
+              className="bg-[#ffffff25]  text-white py-1 text-lg uppercase px-6 font-semibold border-white border hidden lg:inline-block jura-font"
             >
               View github project
             </Link>

@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ----------- Import Fonts ------------ */
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-
 /* ----------- CSS Variables ------------ */
 :root {
   --foreground-rgb: 255, 255, 255;
@@ -22,10 +19,6 @@
   --color-dark-translucent: rgba(40, 40, 40, 0.5);
 }
 
-* {
-  scroll-behavior: smooth;
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -34,21 +27,42 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 p {
-  font-family: "Chakra Petch", serif;
   font-weight: 300;
   line-height: 1.6;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--jura-font);
+}
+
+.jura-font {
+  font-family: var(--jura-font);
+}
+
 /* @component: splash */
 .splash {
-  background-image: url("/img/bg-temp.svg"),
+  background-image:
+    url("/img/bg-temp.svg"),
     linear-gradient(90deg, #ffffff10 1px, transparent 1px),
     linear-gradient(#ffffff00 1px, transparent 1px);
   background-repeat: no-repeat, repeat, repeat;
-  background-size: cover, 4% 100%;
+  background-size:
+    cover,
+    4% 100%;
   background-position: center, 0%, 0%;
 }
 
@@ -164,7 +178,8 @@ p {
 
   &::before {
     top: -1rem;
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
         to bottom,
         var(--color-dark-translucent) 1px,
         transparent 1px
@@ -179,7 +194,8 @@ p {
 
   &::after {
     top: -1rem;
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
         to bottom,
         var(--color-dark-translucent) 1px,
         transparent 1px
@@ -190,7 +206,9 @@ p {
         transparent 1px
       );
     background-size: 16.66% 33.33%;
-    background-position: 0 6px, 6px 0;
+    background-position:
+      0 6px,
+      6px 0;
   }
 }
 
@@ -213,7 +231,8 @@ p {
   }
 
   &::before {
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
         to bottom,
         var(--color-dark-translucent) 0.8px,
         transparent 0.8px
@@ -228,7 +247,8 @@ p {
 
   &::after {
     top: -1rem;
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
         to bottom,
         var(--color-dark-translucent) 0.8px,
         transparent 0.8px
@@ -239,7 +259,9 @@ p {
         transparent 0.8px
       );
     background-size: 33.3% 33.33%;
-    background-position: 0 8px, 6px 0;
+    background-position:
+      0 8px,
+      6px 0;
   }
 }
 
