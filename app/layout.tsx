@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Jura, Chakra_Petch as ChakraPetch } from "next/font/google";
+import {
+  Jura,
+  Chakra_Petch as ChakraPetch,
+  Roboto_Mono,
+  Share_Tech_Mono,
+} from "next/font/google";
 
 import "../styles/globals.scss";
 
@@ -24,6 +29,22 @@ const chakraPetch = ChakraPetch({
   weight: ["300", "400", "500", "600"],
   adjustFontFallback: false,
   variable: "--chakraPetch-font",
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600"],
+  adjustFontFallback: false,
+  variable: "--mono-font",
+});
+
+const shareTechMono = Share_Tech_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400"],
+  adjustFontFallback: false,
+  variable: "--share-tech-mono-font",
 });
 
 export const metadata: Metadata = {
@@ -52,7 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${chakraPetch.className} ${chakraPetch.variable} ${jura.variable}`}
+        className={`${chakraPetch.className} ${chakraPetch.variable} ${jura.variable} ${robotoMono.variable} ${shareTechMono.variable}`}
       >
         <SmoothScrolling>
           <Providers>

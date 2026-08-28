@@ -14,7 +14,13 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        primary: "var(--color-primary)",
+        primary: "rgb(var(--color-primary-rgb) / <alpha-value>)",
+        "primary-dark": "rgb(var(--color-primary-dark-rgb) / <alpha-value>)",
+        secondary: "rgb(var(--color-secondary-rgb) / <alpha-value>)",
+      },
+      fontFamily: {
+        mono: ["var(--mono-font)", "monospace"],
+        tech: ["var(--share-tech-mono-font)", "monospace"],
       },
     },
   },

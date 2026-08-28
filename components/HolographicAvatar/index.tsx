@@ -14,7 +14,7 @@ const HolographicAvatar = () => {
     >
       {/* Avatar Image */}
       <motion.img
-        src="/img/ceeriil.svg" // Replace with your actual image
+        src="/img/ceeriil.svg" 
         alt="Holographic Avatar"
         className="w-full h-full object-cover"
         animate={isHovered ? "hover" : "initial"}

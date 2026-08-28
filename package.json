@@ -10,10 +10,11 @@
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
+    "@gsap/react": "^2.1.2",
     "@studio-freight/react-lenis": "0.0.43",
     "@types/howler": "^2.2.12",
     "framer-motion": "^12.5.0",
-    "gsap": "3.12.5",
+    "gsap": "3.15.0",
     "howler": "^2.2.4",
     "next": "14.1.0",
     "next-transition-router": "^0.2.9",
