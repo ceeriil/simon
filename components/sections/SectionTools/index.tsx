@@ -6,6 +6,7 @@ import {
   TypescriptIcon,
   FireBaseIcon,
 } from "@/components/assets";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 interface ITools {
   name: string;
@@ -41,11 +42,10 @@ const tools: ITools[] = [
 
 export const SectionTools = () => {
   return (
-    <section className="lg:border-t ">
-      <div className="container  mx-auto flex items-center flex-col">
-        <h2 className="bg-white py-1 px-4 uppercase text-xl translate-y-[-50%] text-black inline-block tracking-[0.4rem] font-medium text-center">
-          Tools Box
-        </h2>
+    <section>
+      <SectionHeading title="Tools Box" subtitle="// Tech Stack" />
+
+      <div className="container mx-auto">
         <div className="grid lg:grid-cols-3 gap-8 gap-y-7 py-16 items-center w-full px-4">
           {tools.map(({ name, icon }) => (
             <div

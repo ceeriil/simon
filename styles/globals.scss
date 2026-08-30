@@ -507,6 +507,76 @@ h6 {
   }
 }
 
+/* @component: ViewProjectButton */
+.hud-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15.5rem;
+  height: 3.25rem;
+  padding: 0 1.5rem;
+  border: 1.5px solid var(--color-primary);
+  background-color: transparent;
+  text-decoration: none;
+  transition:
+    width 0.3s ease,
+    box-shadow 0.3s ease;
+
+  // faint double-line accent just inside the top border
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    background: rgb(var(--color-primary-rgb) / 0.5);
+    pointer-events: none;
+  }
+
+  // comb / tick marks hanging below the bottom border
+  &::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: -6px;
+    height: 6px;
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--color-primary),
+      var(--color-primary) 1.5px,
+      transparent 1.5px,
+      transparent 7px
+    );
+    pointer-events: none;
+  }
+
+  &:hover {
+    width: 16.25rem;
+    box-shadow: 0 0 12px rgb(var(--color-primary-rgb) / 0.4);
+  }
+
+  &__label {
+    font-family: var(--mono-font);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.85rem;
+  }
+
+  &__arrow {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    transition: transform 0.25s ease;
+  }
+
+  &:hover &__arrow {
+    transform: translateX(4px);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

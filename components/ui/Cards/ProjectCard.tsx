@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { Link } from "next-transition-router";
 import Image from "next/image";
 
-import { usePlaySound } from "@/hooks/usePlaySound";
+import { ViewProjectButton } from "@/components/ui/Buttons/ViewProjectButton";
 
 interface IProjectCardProps {
   index: number;
@@ -25,7 +24,6 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
   tag,
   projectTags,
 }) => {
-  const playClickSound = usePlaySound("/audio/glitch.mp3");
   const [imgSrc, setImgSrc] = useState(`/img/${slug}.png`);
 
   return (
@@ -60,14 +58,7 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
             </span>
           ))}
         </div>
-        <Link
-          href={`/projects/${slug}`}
-          onMouseEnter={playClickSound}
-          onClick={playClickSound}
-          className="border-primary text-primary py-2.5 px-6 border-2 mt-4 uppercase text-sm inline-block"
-        >
-          View Project
-        </Link>
+        <ViewProjectButton href={`/projects/${slug}`} />
       </div>
     </div>
   );
