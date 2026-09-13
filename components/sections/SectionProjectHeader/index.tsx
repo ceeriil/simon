@@ -26,6 +26,16 @@ export const SectionProjectHeader: React.FC<ISectionProjectHeaderProps> = ({
             alt="Project Image"
             layout="fill"
             className="object-cover"
+            style={{
+              filter: "grayscale(1) brightness(0.45) contrast(1.15)",
+            }}
+          />
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundColor: "var(--color-primary-dark)",
+              mixBlendMode: "color",
+            }}
           />
           <div className="absolute  z-10 py-4 top-0 px-5 flex justify-between items-center w-full ">
             <button
