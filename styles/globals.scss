@@ -507,21 +507,29 @@ h6 {
   }
 }
 
-/* @component: ViewProjectButton */
+/* @component: HudButton */
 .hud-button {
   position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  width: 15.5rem;
+  justify-content: center;
+  gap: 1.5rem;
+  min-width: 15.5rem;
+  width: max-content;
   height: 3.25rem;
   padding: 0 1.5rem;
   border: 1.5px solid var(--color-primary);
   background-color: transparent;
   text-decoration: none;
   transition:
-    width 0.3s ease,
-    box-shadow 0.3s ease;
+    padding 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 
   // faint double-line accent just inside the top border
   &::before {
@@ -554,7 +562,7 @@ h6 {
   }
 
   &:hover {
-    width: 16.25rem;
+    padding: 0 2.25rem;
     box-shadow: 0 0 12px rgb(var(--color-primary-rgb) / 0.4);
   }
 
@@ -574,6 +582,70 @@ h6 {
 
   &:hover &__arrow {
     transform: translateX(4px);
+  }
+}
+
+/* @component: SplashScreen */
+.splash-name-frame {
+  position: relative;
+
+  &::after,
+  &::before,
+  .splash-name-frame-bl,
+  .splash-name-frame-br {
+    content: "";
+    width: 0.75rem;
+    height: 0.75rem;
+    position: absolute;
+    border: 0px solid var(--color-primary);
+  }
+
+  &::after {
+    top: -0.4rem;
+    left: -0.4rem;
+    border-top: 2px solid var(--color-primary);
+    border-left: 2px solid var(--color-primary);
+  }
+
+  &::before {
+    top: -0.4rem;
+    right: -0.4rem;
+    border-top: 2px solid var(--color-primary);
+    border-right: 2px solid var(--color-primary);
+  }
+
+  .splash-name-frame-bl {
+    bottom: -0.4rem;
+    left: -0.4rem;
+    border-bottom: 2px solid var(--color-primary);
+    border-left: 2px solid var(--color-primary);
+  }
+
+  .splash-name-frame-br {
+    bottom: -0.4rem;
+    right: -0.4rem;
+    border-bottom: 2px solid var(--color-primary);
+    border-right: 2px solid var(--color-primary);
+  }
+}
+
+.splash-name-divider {
+  flex: 0 0 auto;
+  height: 0.5rem;
+  width: 8rem;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #2cbf76,
+    #2cbf76 7px,
+    #4affa4 7px,
+    #4affa4 14px
+  );
+
+  &__line {
+    flex: 1 1 auto;
+    height: 1px;
+    background: var(--color-primary);
+    opacity: 0.6;
   }
 }
 

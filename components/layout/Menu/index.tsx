@@ -9,6 +9,7 @@ import { InfoIcon } from "@/components/assets/InfoIcon";
 import { BriefCaseIcon } from "@/components/assets/BriefCaseIcon";
 import { SocialBlock } from "@/components/social-block";
 import { CancelIcon } from "@/components/assets/CancelIcon";
+import { HudButton } from "@/components/ui/Buttons/HudButton";
 
 type MenuProps = {
   isOpen: boolean;
@@ -98,12 +99,9 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ delay: 0.6, duration: 0.4 }}
               >
-                <button
-                  className="border-primary text-primary py-2.5 px-6 border-2 mt-4 uppercase text-sm tracking-[0.25rem]"
-                  type="button"
-                >
-                  Get In Touch
-                </button>
+                <div className="mt-4">
+                  <HudButton label="Get In Touch" />
+                </div>
                 <div className="mt-8 text-lg font-medium lg:hidden">
                   <h3 className="uppercase">Socials</h3>
                   <SocialBlock />

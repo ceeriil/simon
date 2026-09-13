@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-import { ViewProjectButton } from "@/components/ui/Buttons/ViewProjectButton";
+import { HudButton } from "@/components/ui/Buttons/HudButton";
 
 interface IProjectCardProps {
   index: number;
@@ -58,7 +58,7 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
             </span>
           ))}
         </div>
-        <ViewProjectButton href={`/projects/${slug}`} />
+        <HudButton label="View Project" href={`/projects/${slug}`} />
       </div>
     </div>
   );

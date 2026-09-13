@@ -3,6 +3,8 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
+import { HudButton } from "@/components/ui/Buttons/HudButton";
+
 export const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm("xovenvzr");
   if (state.succeeded) {
@@ -46,12 +48,11 @@ export const ContactForm: React.FC = () => {
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
       </div>
-      <button
+      <HudButton
+        label="Let’s Get Started"
         type="submit"
-        className="border-primary text-primary py-2.5 px-4 border-2  uppercase text-sm inline-block tracking-[0.2rem]"
-      >
-        Let’s Get Started
-      </button>
+        disabled={state.submitting}
+      />
     </form>
   );
 };
