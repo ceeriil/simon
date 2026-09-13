@@ -3,8 +3,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import { Menu } from "../Menu";
 import { MenuButton } from "@/components/ui/Buttons/MenuButton";
+
+import { Menu } from "../Menu";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);

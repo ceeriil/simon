@@ -36,7 +36,7 @@ export const HudButton: React.FC<IHudButtonProps> = ({
 
   return (
     <button
-      type={type}
+      type={type === "submit" ? "submit" : "button"}
       onClick={onClick}
       disabled={disabled}
       className="hud-button"

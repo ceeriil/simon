@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import {
   Jura,
   Chakra_Petch as ChakraPetch,
-  Roboto_Mono,
-  Share_Tech_Mono,
+  Roboto_Mono as RobotoMono,
+  Share_Tech_Mono as ShareTechMono,
 } from "next/font/google";
 
 import "../styles/globals.scss";
 
 import AudioPlayer from "@/components/AudioPlayer";
-
-import { Providers } from "./providers";
 import { SoundProvider } from "@/contexts/SoundProvider";
 import { SoundConsentProvider } from "@/contexts/SoundConsent";
 import { SplashScreen } from "@/components/layout/splash-screen/splash-screen";
 import SmoothScrolling from "@/components/utils/smooth-scrolling/smooth-scrolling";
+
+import { Providers } from "./providers";
 
 const jura = Jura({
   subsets: ["latin"],
@@ -31,7 +31,7 @@ const chakraPetch = ChakraPetch({
   variable: "--chakraPetch-font",
 });
 
-const robotoMono = Roboto_Mono({
+const robotoMono = RobotoMono({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600"],
@@ -39,7 +39,7 @@ const robotoMono = Roboto_Mono({
   variable: "--mono-font",
 });
 
-const shareTechMono = Share_Tech_Mono({
+const shareTechMono = ShareTechMono({
   subsets: ["latin"],
   display: "swap",
   weight: ["400"],

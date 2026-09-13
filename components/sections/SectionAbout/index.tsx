@@ -24,7 +24,14 @@ export const SectionAbout = () => {
           <div className="relative z-[2]">
             <h2 className="text-2xl mb-6 uppercase font-[500]">About Me</h2>
             <p className="leading-[1.8] mb-6">
-              i&apos;m just a dude that build things i find  interesting. sometimes they are useful, the rest of them should have never left locahost. i spend most of my time writing code, thinking about writing code, planning on how to write code and sometmes doing onchain stuff. sometimes i lose money. i like space stuffs maybe i am an alien. i also play lot of chess - i'm not good at it. i dont really have a deep life philosophy or anything.. i just like learning how things works and building things i wish existed.
+              i&apos;m just a dude that build things i find interesting.
+              sometimes they are useful, the rest of them should have never left
+              locahost. i spend most of my time writing code, thinking about
+              writing code, planning on how to write code and sometmes doing
+              onchain stuff. sometimes i lose money. i like space stuffs maybe i
+              am an alien. i also play lot of chess - i'm not good at it. i dont
+              really have a deep life philosophy or anything.. i just like
+              learning how things works and building things i wish existed.
             </p>
             <BlockPatternContainer />
           </div>

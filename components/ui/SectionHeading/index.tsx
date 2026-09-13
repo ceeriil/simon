@@ -20,7 +20,6 @@ export const SectionHeading: React.FC<ISectionHeadingProps> = ({
           <span className="section-heading__corner section-heading__corner--bl" />
           <span className="section-heading__corner section-heading__corner--br" />
 
-
           <span className="section-heading__corner section-heading__corner--tl-1" />
           <span className="section-heading__corner section-heading__corner--tr-1" />
           <span className="section-heading__corner section-heading__corner--bl-1" />

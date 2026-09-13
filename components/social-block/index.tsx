@@ -3,8 +3,9 @@
 import Link from "next/link";
 import React from "react";
 
-import { socialLinks } from "./socalLinks";
 import { usePlaySound } from "@/hooks/usePlaySound";
+
+import { socialLinks } from "./socalLinks";
 
 export const SocialBlock = () => {
   const playClickSound = usePlaySound("/audio/glitch.mp3");

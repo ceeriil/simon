@@ -41,7 +41,7 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
             {String(index).padStart(2, "0")}
           </span>
           <span className="font-mono text-secondary text-[0.7rem] uppercase tracking-[0.2rem] pl-4">
-            // {tag} 
+            {`// ${tag}`}
           </span>
         </div>
         <h2 className="uppercase text-3xl md:text-3xl mb-3 tracking-[0.25rem] font-semibold">
@@ -49,7 +49,7 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
         </h2>
         <p>{description}</p>
         <div className="flex flex-wrap gap-2 mt-5 mb-6">
-          {projectTags.map((projectTag) => (
+          {projectTags.map(projectTag => (
             <span
               key={projectTag}
               className="text-primary-dark text-[0.65rem] uppercase tracking-[0.15rem] border border-primary-dark/40 px-3 py-1"
