@@ -649,6 +649,57 @@ h6 {
   }
 }
 
+/* @component: Header MenuButton */
+.menu-button {
+  --chamfer: 10px;
+  --border: 1.5px;
+  display: inline-block;
+  padding: var(--border);
+  background: rgb(255 255 255 / 0.55);
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--chamfer)) 0,
+    100% var(--chamfer),
+    100% 100%,
+    var(--chamfer) 100%,
+    0 calc(100% - var(--chamfer))
+  );
+  transition: filter 0.25s ease;
+
+  &:hover {
+    filter: drop-shadow(0 0 8px rgb(255 255 255 / 0.4));
+  }
+
+  &__inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0.6rem 1.25rem;
+    background: #000;
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--chamfer)) 0,
+      100% var(--chamfer),
+      100% 100%,
+      var(--chamfer) 100%,
+      0 calc(100% - var(--chamfer))
+    );
+  }
+
+  &__label {
+    font-family: var(--jura-font);
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-size: 0.95rem;
+  }
+
+  &__icon {
+    color: rgb(255 255 255 / 0.65);
+    font-size: 1.25rem;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

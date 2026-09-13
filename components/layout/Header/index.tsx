@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 import { Menu } from "../Menu";
+import { MenuButton } from "@/components/ui/Buttons/MenuButton";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,16 +16,7 @@ export const Header = () => {
           {" "}
           Ceeriil
         </Link>
-        <div>
-          <button
-            type="button"
-            className="bg-white inline-block py-2 px-5 text-black uppercase hover:opacity-80
-"
-            onClick={() => setMenuOpen(true)}
-          >
-            Menu
-          </button>
-        </div>
+        <MenuButton onClick={() => setMenuOpen(true)} />
       </div>
       <Menu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </header>

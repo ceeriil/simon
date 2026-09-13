@@ -34,7 +34,7 @@ export const SectionHero = () => {
           <div className="hero-box-border" />
           <div className="hero-box-border-2" />
           <h2 className="text-2xl tracking-[0.1rem] fomt-medium">
-            Creative front-end developer <br /> Building beautiful experiences
+            Software Engineer <br /> Building beautiful experiences
             for web3
           </h2>
         </div>
